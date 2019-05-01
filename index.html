@@ -6,8 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Happy Eagle: Software and Electronics</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">    
+    <!-- CSS Reset-->
+    <link rel="stylesheet" type="text/css" href="css/reset.css">    
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        
+    <!-- Site Styles-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
     <div class="pageWrapper"> 
@@ -32,17 +36,42 @@
             </nav>
         </header>
 
-        <section class="features">
-            <figure>
-                <img src="img/typingOnLaptop_1500x562.png" alt="Laptop Computer" title="Laptop Computer">
-                <div class="features-captionWrapper">
-                    <figcaption>
-                        <h1>Upgrade Your Tools!</h1>
-                        <p>Explore the latest technologies and products.</p>
-                        <button><a href="html/notimplemented.html">Shop Now<img src="img/rightArrow-01.svg" alt="arrow"></a></button>
-                    </figcaption>
-                </div>
-            </figure>
+        <section id="carouselControls" class="features carousel slide" data-ride="false" data-interval="false">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselControls" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselControls" data-slide-to="1"></li>
+            </ol>
+            
+            <div class="carousel-inner">
+                <figure class="carousel-item active">
+                    <img src="img/typingOnLaptop_1500x562.png" alt="Laptop Computer" title="Laptop Computer">
+                    <div class="features-captionWrapper">
+                        <figcaption>
+                            <h1>Need Speed?</h1>
+                            <p>Explore the latest technologies and products.</p>
+                            <button><a href="html/notimplemented.html">Shop Now<img src="img/rightArrow-01.svg" alt="arrow"></a></button>
+                        </figcaption>
+                    </div>
+                </figure>            
+                <figure class="carousel-item">
+                    <img src="img/blur-communication-computer_1500x562.png" alt="Laptop Computer" title="Laptop Computer">
+                    <div class="features-captionWrapper">
+                        <figcaption>
+                            <h1>On the Go?</h1>
+                            <p>Light and fast laptops are here.</p>
+                            <button><a href="html/notimplemented.html">Shop Now<img src="img/rightArrow-01.svg" alt="arrow"></a></button>
+                        </figcaption>
+                    </div>
+                </figure>
+                <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
         </section>
         
         <section class="articles">
@@ -70,7 +99,7 @@
             <article>
                 <img src="img/apple-internet-iphone_280x180.png" alt="Laptop Computer" title="Laptop Computer">
                 <h1>Always with You</h1>
-                <p>Ultimate performance. Ultra low weight. Get the tools you need to be productive.</p>
+                <p>Ultimate performance. Ultra low weight. Get the right tools for the job.</p>
                 <button><a href="html/notimplemented.html">Shop Now<img src="img/rightArrow-01.svg" alt="arrow"></a></button>
             </article>        
         </section>
@@ -149,6 +178,11 @@
         </section>
 
     </footer>
+    
+    <!-- Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
        
 </body>
 </html>
