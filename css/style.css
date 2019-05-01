@@ -19,7 +19,6 @@ header
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: space-between;
 }
 
 .header-logo
@@ -37,6 +36,7 @@ header
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    margin: 0;
 }
 
 .header-nav-primary li
@@ -66,6 +66,7 @@ header
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    margin: 0;
 }
 
 .header-nav-secondary li
@@ -121,7 +122,7 @@ header
     background-color: rgb(241, 241, 241, 0.75);
     padding: 50px;
     text-align: left;
-    margin-right: 30px;
+    margin-right: 50px;
     width: 350px;
 }
 
@@ -272,5 +273,19 @@ footer
     color: rgb(20,20,20);
     text-decoration: underline;
     font-size: 14px;
+}
+
+.carousel-control-prev-icon
+{
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/leftArrow-01.svg");
+}
+
+.carousel-control-next-icon
+{
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/rightArrow-01.svg");
 }
 
