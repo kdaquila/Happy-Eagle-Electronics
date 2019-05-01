@@ -103,13 +103,24 @@ header
     position: relative;
 }
 
-.features figcaption
+.features-captionWrapper
 {
     position: absolute;
-    right: 0;
-    top: 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.features figcaption
+{
     background-color: rgb(241, 241, 241, 0.75);
     padding: 50px;
+    text-align: left;
 }
 
 .features h1
@@ -119,8 +130,37 @@ header
 
 .features p
 {
-    margin: 10px;
+    margin: 10px 0;
     font-size: 18px;
+}
+
+.features button
+{
+    margin: 0 auto;
+    background-color: white;
+    padding: 10px;
+    border: none;
+}
+
+.features button a
+{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.features button a:hover
+{
+    text-decoration: underline;
+}
+
+.features button a img
+{
+    width: 16px;
+    margin: 0 2px;
 }
 
 .articles
@@ -151,6 +191,35 @@ header
 .articles p
 {
     margin: 10px 0 20px 0;
+}
+
+.articles button
+{
+    margin: 0 auto;
+    background-color: white;
+    padding: 10px;
+    border: none;
+}
+
+.articles button a
+{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.articles button a:hover
+{
+    text-decoration: underline;
+}
+
+.articles button a img
+{
+    width: 16px;
+    margin: 0 2px;
 }
 
 footer
