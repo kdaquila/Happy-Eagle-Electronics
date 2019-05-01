@@ -121,6 +121,8 @@ header
     background-color: rgb(241, 241, 241, 0.75);
     padding: 50px;
     text-align: left;
+    margin-right: 30px;
+    width: 350px;
 }
 
 .features h1
@@ -167,12 +169,14 @@ header
 {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-between;
 }
 
 .articles article
 {
-    flex: 1 1 0;
-    padding: 10px;
+    flex: 0 0 auto;
+    box-sizing: border-box;   
+    width: calc((100% - 3*20px)/4);   
 }
 
 .articles img
@@ -190,21 +194,21 @@ header
 
 .articles p
 {
-    margin: 10px 0 20px 0;
+    margin: 10px 0 0 0;
 }
 
 .articles button
 {
     margin: 0 auto;
     background-color: white;
-    padding: 10px;
+    padding: 10px 0;
     border: none;
 }
 
 .articles button a
 {
     text-decoration: none;
-    color: black;
+    color: rgb(40, 116, 204);
     font-size: 16px;
     display: flex;
     flex-flow: row nowrap;
@@ -251,6 +255,7 @@ footer
 
 .footerLinks h1
 {
+    font-size: 20px;
     color: rgb(10,10,10);
     text-decoration: none;
 }
