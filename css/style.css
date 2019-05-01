@@ -1,9 +1,15 @@
 body
 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
     color: black;
+    width: 100%;
+}
+
+.pageWrapper
+{
     width: 85%;
+    min-width: 1040px;
     margin: 0 auto;
 }
 
@@ -87,7 +93,110 @@ header
     cursor: pointer;
 }
 
-.article-primary img
+.features img
 {
     width: 100%;
 }
+
+.features figure
+{
+    position: relative;
+}
+
+.features figcaption
+{
+    position: absolute;
+    right: 0;
+    top: 100px;
+    background-color: rgb(241, 241, 241, 0.75);
+    padding: 50px;
+}
+
+.features h1
+{
+    font-size: 40px;    
+}
+
+.features p
+{
+    margin: 10px;
+    font-size: 18px;
+}
+
+.articles
+{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.articles article
+{
+    flex: 1 1 0;
+    padding: 10px;
+}
+
+.articles img
+{
+    width: 100%;
+}
+
+.articles h1
+{
+    margin: 30px 0 0 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(50,50,50);
+}
+
+.articles p
+{
+    margin: 10px 0 20px 0;
+}
+
+footer
+{        
+    width: 100%;
+    background-color: rgb(230,230,230);
+    overflow: hidden;
+}
+
+.footerLinks
+{
+    width: 85%;    
+    min-width: 1040px;
+    margin: 30px auto;
+    display: flex;
+    flex-flow: row nowrap;
+    /*padding: 30px 0;*/
+}
+
+.footerLinks div
+{
+    flex: 1 1 0;
+}
+
+.footerLinks li
+{
+    margin: 15px 0;
+}
+
+.footerLinks h1
+{
+    color: rgb(10,10,10);
+    text-decoration: none;
+}
+
+.footerLinks a
+{
+    color: rgb(80,80,80);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footerLinks a:hover
+{
+    color: rgb(20,20,20);
+    text-decoration: underline;
+    font-size: 14px;
+}
+
