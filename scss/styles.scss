@@ -12,8 +12,11 @@ header
 
 .header-logo
 {
-    height: 50px;
-    width: auto;
+    img
+    {
+        height: 40px;
+        width: auto;
+    }    
 }
 
 .header-primaryNav 
@@ -31,15 +34,19 @@ header
     li
     {
         margin: 0 10px;
+        padding: 5px 0;
+        border-bottom: solid transparent 2px;
     }
 
     li a
     {
+        font-family: $font-names;
+        font-size: $font-size-small;
         color: black;
         text-decoration: none;
     }
 
-    li a:hover
+    li:hover
     {
         border-bottom: solid black 2px;
     }
@@ -68,6 +75,8 @@ header
 
     li a
     {
+        font-family: $font-names;
+        font-size: $font-size-small;
         color: black;
         text-decoration: none;    
         display: flex;

@@ -7,8 +7,8 @@ header {
   align-items: center;
 }
 
-.header-logo {
-  height: 50px;
+.header-logo img {
+  height: 40px;
   width: auto;
 }
 
@@ -23,12 +23,16 @@ header {
 }
 .header-primaryNav li {
   margin: 0 10px;
+  padding: 5px 0;
+  border-bottom: solid transparent 2px;
 }
 .header-primaryNav li a {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
   color: black;
   text-decoration: none;
 }
-.header-primaryNav li a:hover {
+.header-primaryNav li:hover {
   border-bottom: solid black 2px;
 }
 
@@ -47,6 +51,8 @@ header {
   vertical-align: middle;
 }
 .header-secondaryNav li a {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
   color: black;
   text-decoration: none;
   display: flex;
