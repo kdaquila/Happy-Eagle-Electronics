@@ -58,6 +58,10 @@ header .header-nav-secondary ul li a {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  border-bottom: solid transparent 2px;
+}
+header .header-nav-secondary ul li a:hover {
+  border-bottom: solid black 2px;
 }
 
 #header-nav-secondary-menuButton {
