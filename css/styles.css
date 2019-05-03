@@ -5,14 +5,10 @@ body {
   width: 100%;
 }
 
-main {
-  width: 85%;
-  min-width: 1040px;
-  margin: 0 auto;
-}
-
 header {
-  margin: 10px 0;
+  width: 85%;
+  min-width: 1024px;
+  margin: 10px auto;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -66,6 +62,12 @@ header .header-nav-secondary ul li a:hover {
 
 #header-nav-secondary-menuButton {
   cursor: pointer;
+}
+
+main {
+  width: 85%;
+  min-width: 1024px;
+  margin: 0 auto;
 }
 
 .features figure {

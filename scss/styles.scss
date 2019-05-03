@@ -8,16 +8,11 @@ body
     width: 100%;
 }
 
-main
-{
-    width: 85%;
-    min-width: 1040px;
-    margin: 0 auto;
-}
-
 header
 {
-    margin: 10px 0;
+    width: $page-width;
+    min-width: $page-minWidth;
+    margin: 10px auto;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -94,6 +89,13 @@ header
 #header-nav-secondary-menuButton
 {
     cursor: pointer;
+}
+
+main
+{
+    width: $page-width;
+    min-width: $page-minWidth;
+    margin: 0 auto;
 }
 
 .features figure 
