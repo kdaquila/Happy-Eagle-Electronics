@@ -115,12 +115,7 @@ main
     figcaption 
     {
         position: absolute;
-        right: 50px;
-        top: 50px;        
-        background-color: rgb(241, 241, 241, 0.75);
-        padding: 30px;
-        text-align: left;
-        width: 450px;
+        text-align: left;        
         display: flex;
         flex-flow: column nowrap;
         align-content: flex-end;
@@ -140,21 +135,32 @@ main
 
         button 
         {
-            margin-right: auto;
-            background-color: white;
-            padding: 10px;
+            margin-right: auto;            
+            margin-top: 10px;
+            padding: 7px;
             border: none;
         }
 
         button a 
         {
-            text-decoration: none;
-            color: $font-color-lightGray;
-            font-size: $font-size-small;
+            text-decoration: none;            
+            font-size: $font-size-medium;
             font-family: $font-names;
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
+        }
+
+        button a svg
+        {
+            width: $font-size-medium;        
+
+            .line
+            {
+                fill:none;
+                stroke-miterlimit:10;
+                stroke-width:3px;
+            }
         }
 
         button a:hover 
@@ -168,6 +174,68 @@ main
             margin-left: 0 4px;
         }
     }   
+}
+
+.main-primaryFigures figure#figure-A
+{
+    figcaption
+    {
+        color: white;    
+        right: 20px;
+        top: 50%;     
+        transform: translateY(-50%);           
+        padding: 30px;
+        width: 300px;
+
+        button
+        {
+            background-color: white;
+        }
+
+        button a
+        {
+            color: black;
+        }
+
+        button a svg
+        {  
+            .line
+            {
+                stroke:black;
+            }
+        }
+    }    
+}
+
+.main-primaryFigures figure#figure-B
+{
+    figcaption
+    {
+        color: black;    
+        left: 20px;
+        top: 50%;     
+        transform: translateY(-50%);   
+        padding: 30px;
+        width: 350px;
+
+        button
+        {
+            background-color: black;
+        }
+
+        button a
+        {
+            color: white;
+        }
+
+        button a svg
+        {  
+            .line
+            {
+                stroke:white;
+            }
+        }
+    }    
 }
 
 .main-secondaryFigures
@@ -334,7 +402,7 @@ footer
         img 
         {
             width: $font-size-small;
-            margin-right: 3px;
+            margin-right: 7px;
             vertical-align: middle;
         }
 
