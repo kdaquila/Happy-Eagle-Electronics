@@ -1,0 +1,291 @@
+body
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: black;
+    width: 100%;
+}
+
+.pageWrapper
+{
+    width: 85%;
+    min-width: 1040px;
+    margin: 0 auto;
+}
+
+header
+{
+    margin: 10px 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.header-logo
+{
+    height: 50px;
+}
+
+.header-nav-primary 
+{
+    margin-right: auto;
+}
+
+.header-nav-primary ul
+{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin: 0;
+}
+
+.header-nav-primary li
+{
+    margin: 0 10px;
+}
+
+.header-nav-primary li img
+{
+    height: 20px;
+    vertical-align: middle;
+}
+
+.header-nav-primary li a
+{
+    color: black;
+    text-decoration: none;
+}
+
+.header-nav-primary li a:hover
+{
+    border-bottom: solid black 2px;
+}
+
+.header-nav-secondary ul
+{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin: 0;
+}
+
+.header-nav-secondary li
+{
+    margin: 0 10px;    
+}
+
+.header-nav-secondary li img
+{
+    height: 30px;
+    vertical-align: middle;
+}
+
+.header-nav-secondary li a
+{
+    color: black;
+    text-decoration: none;    
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+#header-nav-secondary-menuButton
+{
+    cursor: pointer;
+}
+
+.features img
+{
+    width: 100%;
+}
+
+.features figure
+{
+    position: relative;
+}
+
+.features-captionWrapper
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.features figcaption
+{
+    background-color: rgb(241, 241, 241, 0.75);
+    padding: 50px;
+    text-align: left;
+    margin-right: 50px;
+    width: 350px;
+}
+
+.features h1
+{
+    font-size: 40px;    
+}
+
+.features p
+{
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.features button
+{
+    margin: 0 auto;
+    background-color: white;
+    padding: 10px;
+    border: none;
+}
+
+.features button a
+{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.features button a:hover
+{
+    text-decoration: underline;
+}
+
+.features button a img
+{
+    width: 16px;
+    margin: 0 2px;
+}
+
+.articles
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.articles article
+{
+    flex: 0 0 auto;
+    box-sizing: border-box;   
+    width: calc((100% - 3*20px)/4);   
+}
+
+.articles img
+{
+    width: 100%;
+}
+
+.articles h1
+{
+    margin: 30px 0 0 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(50,50,50);
+}
+
+.articles p
+{
+    margin: 10px 0 0 0;
+}
+
+.articles button
+{
+    margin: 0 auto;
+    background-color: white;
+    padding: 10px 0;
+    border: none;
+}
+
+.articles button a
+{
+    text-decoration: none;
+    color: rgb(40, 116, 204);
+    font-size: 16px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.articles button a:hover
+{
+    text-decoration: underline;
+}
+
+.articles button a img
+{
+    width: 16px;
+    margin: 0 2px;
+}
+
+footer
+{        
+    width: 100%;
+    background-color: rgb(230,230,230);
+    overflow: hidden;
+}
+
+.footerLinks
+{
+    width: 85%;    
+    min-width: 1040px;
+    margin: 30px auto;
+    display: flex;
+    flex-flow: row nowrap;
+    /*padding: 30px 0;*/
+}
+
+.footerLinks div
+{
+    flex: 1 1 0;
+}
+
+.footerLinks li
+{
+    margin: 15px 0;
+}
+
+.footerLinks h1
+{
+    font-size: 20px;
+    color: rgb(10,10,10);
+    text-decoration: none;
+}
+
+.footerLinks a
+{
+    color: rgb(80,80,80);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footerLinks a:hover
+{
+    color: rgb(20,20,20);
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.carousel-control-prev-icon
+{
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/leftArrow-01.svg");
+}
+
+.carousel-control-next-icon
+{
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/rightArrow-01.svg");
+}
+
