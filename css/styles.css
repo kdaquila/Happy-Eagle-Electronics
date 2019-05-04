@@ -124,6 +124,32 @@ main {
   width: 14px;
   margin-left: 0 4px;
 }
+.main-primaryFigures figure .main-primaryFigures-nextButton {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 70px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.main-primaryFigures figure .main-primaryFigures-nextButton .line {
+  fill: none;
+  stroke-miterlimit: 10;
+  stroke-width: 3px;
+}
+.main-primaryFigures figure .main-primaryFigures-prevButton {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 70px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.main-primaryFigures figure .main-primaryFigures-prevButton .line {
+  fill: none;
+  stroke-miterlimit: 10;
+  stroke-width: 3px;
+}
 
 .main-primaryFigures figure#figure-A figcaption {
   color: white;
@@ -142,10 +168,16 @@ main {
 .main-primaryFigures figure#figure-A figcaption button a svg .line {
   stroke: black;
 }
+.main-primaryFigures figure#figure-A .main-primaryFigures-nextButton .line {
+  stroke: white;
+}
+.main-primaryFigures figure#figure-A .main-primaryFigures-prevButton .line {
+  stroke: white;
+}
 
 .main-primaryFigures figure#figure-B figcaption {
   color: black;
-  left: 20px;
+  left: 40px;
   top: 50%;
   transform: translateY(-50%);
   padding: 30px;
@@ -159,6 +191,12 @@ main {
 }
 .main-primaryFigures figure#figure-B figcaption button a svg .line {
   stroke: white;
+}
+.main-primaryFigures figure#figure-B .main-primaryFigures-nextButton .line {
+  stroke: black;
+}
+.main-primaryFigures figure#figure-B .main-primaryFigures-prevButton .line {
+  stroke: black;
 }
 
 .main-secondaryFigures {

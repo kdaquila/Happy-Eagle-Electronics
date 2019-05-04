@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">    
     <!-- Site Styles-->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- Siema Slider -->
+    <script src="third_party/siema/siema.min.js"></script>    
 </head>
 <body>    
     <header>
@@ -33,7 +35,7 @@
         </nav>
     </header>
 
-    <main>        
+    <main>    
         <section class="main-primaryFigures">
             <figure id="figure-A">
                 <img src="img/typingOnLaptop_1500x562.png" alt="Laptop Computer" title="Laptop Computer" width="640">
@@ -41,7 +43,9 @@
                     <h1>Need Speed?</h1>
                     <p>Explore the latest technology</p>
                     <button><a href="notimplemented.html">Shop Now<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><polyline class="line" points="17 42 33 26 17 10"/></svg></a></button>
-                </figcaption>                    
+                </figcaption>
+                <div class="main-primaryFigures-prevButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><polyline class="line" points="33 10 17 26 33 42"/></svg></div>
+                <div class="main-primaryFigures-nextButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><polyline class="line" points="17 42 33 26 17 10"/></svg></div>                    
             </figure> 
 
             <figure id="figure-B">
@@ -50,7 +54,9 @@
                     <h1>On the Move!</h1>
                     <p>Order a fast, new laptop today.</p>
                     <button><a href="notimplemented.html">Shop Now<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><polyline class="line" points="17 42 33 26 17 10"/></svg></a></button>
-                </figcaption>                    
+                </figcaption>
+                <div class="main-primaryFigures-prevButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><polyline class="line" points="33 10 17 26 33 42"/></svg></div>
+                <div class="main-primaryFigures-nextButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><polyline class="line" points="17 42 33 26 17 10"/></svg></div>                    
             </figure>
         </section>
         
@@ -188,6 +194,36 @@
                 </ul>
             </nav>            
         </section>
-    </footer>         
+    </footer> 
+    
+    <script>
+        const mySiema = new Siema({
+            selector: '.main-primaryFigures',
+            duration: 200,
+            easing: 'ease-out',
+            perPage: 1,
+            startIndex: 0,
+            draggable: true,
+            multipleDrag: true,
+            threshold: 20,
+            loop: true,
+            rtl: false,
+            onInit: () => {},
+            onChange: () => {},
+        });
+
+        // Add triggers for next buttons
+        var buttons = document.getElementsByClassName("main-primaryFigures-nextButton");
+        for (var i = 0; i < buttons.length; i++) {
+            buttons.item(i).addEventListener('click', () => mySiema.next(1));
+        }
+
+        // Add triggers for prev buttons
+        var buttons = document.getElementsByClassName("main-primaryFigures-prevButton");
+        for (var i = 0; i < buttons.length; i++) {
+            buttons.item(i).addEventListener('click', () => mySiema.next(1));
+        }
+
+    </script>
 </body>
 </html>
