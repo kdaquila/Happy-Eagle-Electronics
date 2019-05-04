@@ -1,3 +1,7 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 header {
   width: 85%;
   min-width: 1024px;
@@ -27,7 +31,6 @@ header {
   border-bottom: solid transparent 2px;
 }
 .header-primaryNav li a {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 14px;
   color: black;
   text-decoration: none;
@@ -51,7 +54,6 @@ header {
   vertical-align: middle;
 }
 .header-secondaryNav li a {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 14px;
   color: black;
   text-decoration: none;
@@ -87,13 +89,11 @@ main {
   align-content: flex-end;
 }
 .main-primaryFigures figure figcaption h1 {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 50px;
 }
 .main-primaryFigures figure figcaption p {
   margin: 10px 0;
   font-size: 20px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .main-primaryFigures figure figcaption button {
   margin-right: auto;
@@ -104,7 +104,6 @@ main {
 .main-primaryFigures figure figcaption button a {
   text-decoration: none;
   font-size: 20px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -224,14 +223,12 @@ main {
   margin: 30px 0 0 0;
 }
 .main-secondaryFigures figure figcaption h1 {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
   font-weight: bold;
   color: #282828;
 }
 .main-secondaryFigures figure figcaption p {
   margin: 10px 0 0 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 14px;
 }
 .main-secondaryFigures figure figcaption button {
@@ -243,7 +240,6 @@ main {
 .main-secondaryFigures figure figcaption button a {
   text-decoration: none;
   color: #2874cc;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 14px;
   display: flex;
   flex-flow: row nowrap;
@@ -261,7 +257,6 @@ main {
   width: 85%;
   min-width: 1024px;
   margin: 30px auto;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
   color: #505050;
 }
@@ -297,7 +292,6 @@ footer {
   margin: 15px 0;
 }
 .footer-primaryLinks nav h1 {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
   color: #282828;
   text-decoration: none;
@@ -305,7 +299,6 @@ footer {
 .footer-primaryLinks nav a {
   color: #505050;
   text-decoration: none;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 14px;
 }
 .footer-primaryLinks nav a:hover {
@@ -330,7 +323,6 @@ footer {
   vertical-align: middle;
 }
 .footer-secondaryLinks .languageSelector span {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 14px;
   color: #505050;
 }
@@ -345,7 +337,6 @@ footer {
 }
 .footer-secondaryLinks nav ul li {
   margin: 0 10px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 14px;
   color: #505050;
 }
