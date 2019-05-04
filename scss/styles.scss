@@ -109,7 +109,7 @@ main
 .main-primaryFigures figure
 {   
     position: relative;
-
+    
     img
     {
         width: 100%;
@@ -122,58 +122,7 @@ main
         display: flex;
         flex-flow: column nowrap;
         align-content: flex-end;
-
-        h1 
-        {
-            font-size: $font-size-large;    
-        }
-
-        p 
-        {
-            margin: 10px 0;
-            font-size: $font-size-medium; 
-        }
-
-        button 
-        {
-            margin-right: auto;            
-            margin-top: 10px;
-            padding: 7px;
-            border: none;
-        }
-
-        button a 
-        {
-            text-decoration: none;            
-            font-size: $font-size-medium;
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: center;
-        }
-
-        button a svg
-        {
-            width: $font-size-medium;        
-
-            .line
-            {
-                fill:none;
-                stroke-miterlimit:10;
-                stroke-width:3px;
-            }
-        }
-
-        button a:hover 
-        {
-            text-decoration: underline;
-        }
-
-        button a img 
-        {
-            width: $font-size-small;
-            margin-left: 0 4px;
-        }
-    }   
+    }
 
     .main-primaryFigures-nextButton
     {
@@ -183,13 +132,6 @@ main
         width: 70px;
         transform: translateY(-50%);
         cursor: pointer;
-    }
-
-    .main-primaryFigures-nextButton .line
-    {
-        fill:none;
-        stroke-miterlimit:10;
-        stroke-width:3px;
     }
 
     .main-primaryFigures-prevButton
@@ -202,15 +144,76 @@ main
         cursor: pointer;
     }
 
+    .main-primaryFigures-nextButton .line
+    {
+        fill:none;
+        stroke-miterlimit:10;
+        stroke-width:3px;
+    }        
+
     .main-primaryFigures-prevButton .line
     {
         fill:none;
         stroke-miterlimit:10;
         stroke-width:3px;
-    }
+    }    
 }
 
-.main-primaryFigures figure#figure-A
+.main-primaryFigures figcaption
+{
+    h1 
+    {
+        font-size: $font-size-large;    
+    }
+
+    p 
+    {
+        margin: 10px 0;
+        font-size: $font-size-medium; 
+    }
+
+    button 
+    {
+        margin-right: auto;            
+        margin-top: 10px;
+        padding: 7px;
+        border: none;
+    }
+
+    button a 
+    {
+        text-decoration: none;            
+        font-size: $font-size-medium;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    button a svg
+    {
+        width: $font-size-medium;        
+
+        .line
+        {
+            fill:none;
+            stroke-miterlimit:10;
+            stroke-width:3px;
+        }
+    }
+
+    button a:hover 
+    {
+        text-decoration: underline;
+    }
+
+    button a img 
+    {
+        width: $font-size-small;
+        margin-left: 0 4px;
+    }
+}   
+
+.main-primaryFigures #figure-A
 {
     figcaption
     {
@@ -219,26 +222,23 @@ main
         top: 50%;     
         transform: translateY(-50%);           
         padding: 30px;
-        width: 300px;
+        width: 300px; 
+    }     
 
-        button
-        {
-            background-color: white;
-        }
+    figcaption button
+    {
+        background-color: white;
+    }
 
-        button a
-        {
-            color: black;
-        }
+    figcaption button a
+    {
+        color: black;
+    }
 
-        button a svg
-        {  
-            .line
-            {
-                stroke:black;
-            }
-        }
-    }    
+    figcaption svg .line
+    {
+        stroke:black;
+    }
 
     .main-primaryFigures-nextButton .line
     {
@@ -249,9 +249,9 @@ main
     {
         stroke: white;
     }
-}
+}    
 
-.main-primaryFigures figure#figure-B
+.main-primaryFigures #figure-B
 {
     figcaption
     {
@@ -261,25 +261,22 @@ main
         transform: translateY(-50%);   
         padding: 30px;
         width: 350px;
+    }
 
-        button
-        {
-            background-color: black;
-        }
+    figcaption button
+    {
+        background-color: black;
+    }
 
-        button a
-        {
-            color: white;
-        }
+    figcaption button a
+    {
+        color: white;
+    }
 
-        button a svg
-        {  
-            .line
-            {
-                stroke:white;
-            }
-        }
-    }   
+    figcaption svg .line
+    {  
+        stroke:white;
+    }
     
     .main-primaryFigures-nextButton .line
     {
@@ -307,7 +304,7 @@ main
     margin: 10px 0; 
     display: flex;
     flex-flow: column nowrap;
-
+    
     img
     {
         width: 100%;
@@ -320,50 +317,54 @@ main
         flex-flow: column nowrap;
         justify-content: space-between;
         margin: 30px 0 0 0;
-
-        h1
-        {                
-            font-size: $font-size-medium;
-            font-weight: bold;
-            color: $font-color-darkGray;
-        }
-
-        p
-        {
-            margin: 10px 0 0 0;
-            font-size: $font-size-small;
-        }
-
-        button
-        {
-            background-color: white;
-            padding: 0;
-            border: none;
-            margin-top: 10px;
-        }
-
-        button a
-        {
-            text-decoration: none;
-            color: $font-color-blue;
-            font-size: $font-size-small;
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: center;
-        }
-
-        button a:hover
-        {
-            text-decoration: underline;
-        }
-
-        button a img
-        {
-            width: $font-size-small;
-            margin-left: 4px;
-        }
     }
 }
+
+.main-secondaryFigures figcaption
+{
+    h1
+    {                
+        font-size: $font-size-medium;
+        font-weight: bold;
+        color: $font-color-darkGray;
+    }
+
+    p
+    {
+        margin: 10px 0 0 0;
+        font-size: $font-size-small;
+    }
+
+    button
+    {
+        background-color: white;
+        padding: 0;
+        border: none;
+        margin-top: 10px;
+    }
+
+    button a
+    {
+        text-decoration: none;
+        color: $font-color-blue;
+        font-size: $font-size-small;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    button a:hover
+    {
+        text-decoration: underline;
+    }
+
+    button a img
+    {
+        width: $font-size-small;
+        margin-left: 4px;
+    }
+}
+
 
 .social-media
 {
@@ -407,31 +408,34 @@ footer
     nav
     {
         flex: 0 1 auto;
+    }
+}
+
+.footer-primaryLinks nav
+{
+    h1
+    {
+        font-size: $font-size-medium;
+        color: $font-color-darkGray;
+        text-decoration: none;
+    }
     
-        li
-        {
-            margin: 15px 0;
-        }
+    li
+    {
+        margin: 15px 0;
+    }    
 
-        h1
-        {
-            font-size: $font-size-medium;
-            color: $font-color-darkGray;
-            text-decoration: none;
-        }
+    a
+    {
+        color: $font-color-lightGray;
+        text-decoration: none;
+        font-size: $font-size-small;
+    }
 
-        a
-        {
-            color: $font-color-lightGray;
-            text-decoration: none;
-            font-size: $font-size-small;
-        }
-
-        a:hover
-        {
-            color: $font-color-darkGray;
-            text-decoration: underline;
-        }
+    a:hover
+    {
+        color: $font-color-darkGray;
+        text-decoration: underline;
     }
 }
 
@@ -442,55 +446,57 @@ footer
     margin: 50px auto 0 auto;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between; 
+    justify-content: space-between;
 
     .languageSelector
     {
         cursor: pointer;
-
-        img 
-        {
-            width: $font-size-small;
-            margin-right: 7px;
-            vertical-align: middle;
-        }
-
-        span
-        {
-            font-size: $font-size-small;
-            color: $font-color-lightGray;
-        }
+        font-size: $font-size-small;
+        color: $font-color-lightGray;
     }
 
     .languageSelector:hover
     {
         color: $font-color-darkGray;
         text-decoration: underline;
-    }
+    }    
+}
 
-    nav ul
+.footer-secondaryLinks .languageSelector
+{
+    img 
+    {
+        width: $font-size-small;
+        margin-right: 7px;
+        vertical-align: middle;
+    }
+}
+
+.footer-secondaryLinks nav
+{
+    ul
     {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-around;
+    }
 
-        li
-        {
-            margin: 0 10px;
-            font-size: $font-size-small;    
-            color: $font-color-lightGray;    
-        }
+    ul li
+    {
+        margin: 0 10px;
+        font-size: $font-size-small;    
+        color: $font-color-lightGray;    
+    }
 
-        li a
-        {
-            text-decoration: none;
-            color: $font-color-lightGray;
-        }
+    ul li a
+    {
+        text-decoration: none;
+        color: $font-color-lightGray;
+    }
 
-        li a:hover
-        {
-            color: $font-color-darkGray;
-            text-decoration: underline;
-        }
+    ul li a:hover
+    {
+        color: $font-color-darkGray;
+        text-decoration: underline;
     }
 }
