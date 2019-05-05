@@ -88,9 +88,10 @@ main .main-socialMedia {
   color: #505050;
 }
 
-.main-primaryFigures figure {
+.main-primaryFigures {
   position: relative;
 }
+
 .main-primaryFigures figure img {
   width: 100%;
 }
@@ -210,6 +211,79 @@ main .main-socialMedia {
 }
 .main-primaryFigures #figure-B .main-primaryFigures-prevButton .line {
   stroke: black;
+}
+
+.main-primaryFigures #figure-C figcaption {
+  color: black;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 30px;
+  width: 350px;
+}
+.main-primaryFigures #figure-C figcaption button {
+  background-color: black;
+}
+.main-primaryFigures #figure-C figcaption button a {
+  color: white;
+}
+.main-primaryFigures #figure-C figcaption svg .line {
+  stroke: white;
+}
+.main-primaryFigures #figure-C .main-primaryFigures-nextButton .line {
+  stroke: black;
+}
+.main-primaryFigures #figure-C .main-primaryFigures-prevButton .line {
+  stroke: black;
+}
+
+.main-primaryFigures #figure-D figcaption {
+  color: black;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 30px;
+  width: 350px;
+}
+.main-primaryFigures #figure-D figcaption button {
+  background-color: black;
+}
+.main-primaryFigures #figure-D figcaption button a {
+  color: white;
+}
+.main-primaryFigures #figure-D figcaption svg .line {
+  stroke: white;
+}
+.main-primaryFigures #figure-D .main-primaryFigures-nextButton .line {
+  stroke: black;
+}
+.main-primaryFigures #figure-D .main-primaryFigures-prevButton .line {
+  stroke: black;
+}
+
+.main-primaryFigures-prevState {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9;
+}
+
+.main-primaryFigures-currState {
+  display: block;
+  position: static;
+}
+
+.main-primaryFigures-nextState {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.main-primaryFigures-hiddenState {
+  display: none;
 }
 
 .main-secondaryFigures figure {

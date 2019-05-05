@@ -123,10 +123,13 @@ main
     }
 }
 
-.main-primaryFigures figure
-{   
+.main-primaryFigures
+{ 
     position: relative;
-    
+}
+
+.main-primaryFigures figure
+{       
     img
     {
         width: 100%;
@@ -304,6 +307,110 @@ main
     {
         stroke: black;
     }
+}
+
+.main-primaryFigures #figure-C
+{
+    figcaption
+    {
+        color: black;    
+        left: 40px;
+        top: 50%;     
+        transform: translateY(-50%);   
+        padding: 30px;
+        width: 350px;
+    }
+
+    figcaption button
+    {
+        background-color: black;
+    }
+
+    figcaption button a
+    {
+        color: white;
+    }
+
+    figcaption svg .line
+    {  
+        stroke:white;
+    }
+    
+    .main-primaryFigures-nextButton .line
+    {
+        stroke: black;
+    }
+
+    .main-primaryFigures-prevButton .line
+    {
+        stroke: black;
+    }
+}
+
+.main-primaryFigures #figure-D
+{
+    figcaption
+    {
+        color: black;    
+        left: 40px;
+        top: 50%;     
+        transform: translateY(-50%);   
+        padding: 30px;
+        width: 350px;
+    }
+
+    figcaption button
+    {
+        background-color: black;
+    }
+
+    figcaption button a
+    {
+        color: white;
+    }
+
+    figcaption svg .line
+    {  
+        stroke:white;
+    }
+    
+    .main-primaryFigures-nextButton .line
+    {
+        stroke: black;
+    }
+
+    .main-primaryFigures-prevButton .line
+    {
+        stroke: black;
+    }
+}
+
+.main-primaryFigures-prevState
+{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9;
+}
+.main-primaryFigures-currState
+{
+    display: block;
+    position: static;
+}
+
+.main-primaryFigures-nextState
+{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+.main-primaryFigures-hiddenState
+{
+    display: none;
 }
 
 .main-secondaryFigures figure
