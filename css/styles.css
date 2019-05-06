@@ -90,6 +90,7 @@ main .main-socialMedia {
 
 .main-primaryFigures {
   position: relative;
+  overflow: hidden;
 }
 
 .main-primaryFigures figure img {
@@ -266,12 +267,15 @@ main .main-socialMedia {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 9;
+  z-index: 11;
 }
 
 .main-primaryFigures-currState {
   display: block;
-  position: static;
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 10;
 }
 
 .main-primaryFigures-nextState {
@@ -279,11 +283,28 @@ main .main-socialMedia {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 9;
+  z-index: 11;
 }
 
 .main-primaryFigures-hiddenState {
   display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main-primaryFigures-inactiveState {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 11;
+}
+
+.main-primaryFigures-activeState {
+  display: block;
+  position: relative;
+  z-index: 12;
 }
 
 .main-primaryFigures-buttons {
@@ -292,6 +313,7 @@ main .main-socialMedia {
   left: 50%;
   transform: translateX(-50%);
   margin: 10px auto;
+  z-index: 12;
 }
 .main-primaryFigures-buttons button {
   width: 30px;

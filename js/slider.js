@@ -9,6 +9,7 @@ $('section.main-primaryFigures').each(function(){
     var nextIndex = 1;
     var prevIndex = nFigures-1;
     var timeout;
+    var isAutoPlay = true;
 
     var currWidth = $('main').css('width');
     $('.main-primaryFigures-prevState').css({width: currWidth, right: currWidth});
@@ -24,26 +25,54 @@ $('section.main-primaryFigures').each(function(){
 
     function move(newIndex) {
         
-        advance();
+        var currWidth = $this.css('width');
+        var delay = 300;
 
-        $figures.eq(currIndex).removeClass('main-primaryFigures-currState');
-        $figures.eq(currIndex).addClass('main-primaryFigures-hiddenState');
-        $figures.eq(newIndex).removeClass('main-primaryFigures-hiddenState');
-        $figures.eq(newIndex).addClass('main-primaryFigures-currState');
+        function update()
+        {
+            $figures.eq(newIndex).removeClass();
+            $figures.eq(newIndex).addClass('main-primaryFigures-currState');
+            $figures.eq(currIndex).removeClass();
+            $figures.eq(currIndex).addClass('main-primaryFigures-hiddenState');
 
-        $buttons.find('circle').css({fill: 'transparent'});
-        $buttons.eq(newIndex).find('circle').css({fill: 'white'});
+            $buttons.find('circle').css({fill: 'transparent'});
+            $buttons.eq(newIndex).find('circle').css({fill: 'white'});
 
-        currIndex = newIndex;
-        nextIndex = (currIndex+1)%nFigures;
-        prevIndex = (currIndex-1)%nFigures;        
+            currIndex = newIndex;
+            nextIndex = (currIndex+1)%nFigures;
+            prevIndex = ((currIndex-1)%nFigures + nFigures)%nFigures;                
+            
+            $figures.css({right: '', left: '', width: ''});
+        }
+
+        if ($figures.eq(newIndex).is(':animated') || 
+            $figures.eq(currIndex).is(':animated') ||
+            newIndex == currIndex) {
+                return;
+            }
+        else if (newIndex > currIndex) {         
+            $figures.eq(newIndex).removeClass('main-primaryFigures-hiddenState');
+            $figures.eq(newIndex).addClass('main-primaryFigures-nextState');
+            $figures.eq(newIndex).css({left: currWidth, width: currWidth});
+            $figures.eq(currIndex).animate({right: currWidth}, delay);
+            $figures.eq(newIndex).animate({left: 0}, delay, update);
+        } else if (newIndex < currIndex) {
+            $figures.eq(newIndex).removeClass('main-primaryFigures-hiddenState');
+            $figures.eq(newIndex).addClass('main-primaryFigures-prevState');
+            $figures.eq(newIndex).css({right: currWidth, width: currWidth});
+            $figures.eq(currIndex).animate({left: currWidth}, delay);
+            $figures.eq(newIndex).animate({right: 0}, delay, update);
+        }    
+        
+        if (isAutoPlay == true) {
+            advance();
+        }
     }
 
-    function advance() {
+    function advance() {        
+        var delay = 2000;
         clearTimeout(timeout);
-        timeout = setTimeout(function(){
-            next();
-        }, 4000);
+        timeout = setTimeout(function(){next();}, delay); 
     }
 
     // setup buttons
@@ -61,13 +90,15 @@ $('section.main-primaryFigures').each(function(){
         });
     });
 
-    // setup next buttons
+    // setup prev buttons
     $prevButtons.each(function(index){
         $(this).on('click', function(){
             prev();
         });
     });
 
-    advance();
+    if (isAutoPlay == true) {
+        advance();
+    }
 
 }); // each(function)
