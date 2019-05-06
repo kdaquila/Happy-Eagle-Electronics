@@ -1,7 +1,9 @@
 $('section.main-primaryFigures').each(function(){
     var $this = $(this);
     var $figures = $this.find('figure');
-    var $buttons = $this.find('.main-primaryFigures-buttons button');
+    var $buttons = $this.find('.main-primaryFigures-buttons-move');
+    var $playButton = $this.find('.main-primaryFigures-buttons-play');
+    var $pauseButton = $this.find('.main-primaryFigures-buttons-pause');
     var $nextButtons = $this.find('figure .main-primaryFigures-nextButton');
     var $prevButtons = $this.find('figure .main-primaryFigures-prevButton');
     var nFigures = $figures.length;
@@ -51,20 +53,21 @@ $('section.main-primaryFigures').each(function(){
                 return;
             }
         else if (newIndex > currIndex) {         
-            $figures.eq(newIndex).removeClass('main-primaryFigures-hiddenState');
+            $figures.eq(newIndex).removeClass();
             $figures.eq(newIndex).addClass('main-primaryFigures-nextState');
             $figures.eq(newIndex).css({left: currWidth, width: currWidth});
             $figures.eq(currIndex).animate({right: currWidth}, delay);
             $figures.eq(newIndex).animate({left: 0}, delay, update);
         } else if (newIndex < currIndex) {
-            $figures.eq(newIndex).removeClass('main-primaryFigures-hiddenState');
+            $figures.eq(newIndex).removeClass();
             $figures.eq(newIndex).addClass('main-primaryFigures-prevState');
             $figures.eq(newIndex).css({right: currWidth, width: currWidth});
             $figures.eq(currIndex).animate({left: currWidth}, delay);
             $figures.eq(newIndex).animate({right: 0}, delay, update);
         }    
         
-        if (isAutoPlay == true) {
+        if (isAutoPlay==true)
+        {
             advance();
         }
     }
@@ -75,7 +78,7 @@ $('section.main-primaryFigures').each(function(){
         timeout = setTimeout(function(){next();}, delay); 
     }
 
-    // setup buttons
+    // setup move buttons
     $buttons.each(function(index){
         $(this).on('click', function(){
             move(index);
@@ -95,6 +98,44 @@ $('section.main-primaryFigures').each(function(){
         $(this).on('click', function(){
             prev();
         });
+    });
+
+    
+    function enablePlayButton() {
+        $pauseButton.css({display: 'none'});
+        $playButton.css({display: 'inline'});
+    }
+
+    function enablePauseButton() {
+        $pauseButton.css({display: 'inline'});
+        $playButton.css({display: 'none'});
+    }
+
+    function playPauseEventHandler() {
+        if (isAutoPlay == true) {
+            isAutoPlay = false;
+            clearTimeout(timeout);
+            enablePlayButton();            
+        } else if(isAutoPlay == false){
+            isAutoPlay = true;
+            enablePauseButton();
+            advance();
+        }
+    }
+    
+    // setup play/pause buttons
+    if (isAutoPlay == true) {
+        enablePauseButton();
+    } else if (isAutoPlay == false) {
+        enablePlayButton();
+    }
+
+    $playButton.each(function(){
+        $(this).on('click', playPauseEventHandler)
+    });
+
+    $pauseButton.each(function(){
+        $(this).on('click', playPauseEventHandler)
     });
 
     if (isAutoPlay == true) {

@@ -1,0 +1,11 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: red;
+      }
+    </style>
+  </defs>
+  <title>playButton_icon</title>
+  <polygon class="cls-1" points="97.58 50 12.71 1 12.71 99 97.58 50"/>
+</svg>

@@ -1,0 +1,15 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 20px;
+      }
+    </style>
+  </defs>
+  <title>pauseButton_icon</title>
+  <line class="cls-1" x1="25" y1="2.5" x2="25" y2="97.5"/>
+  <line class="cls-1" x1="75" y1="3" x2="75" y2="98"/>
+</svg>

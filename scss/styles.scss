@@ -450,17 +450,32 @@ main
         width: 30px;
         background-color: transparent;
         border: none;
+        cursor: pointer;
     }
 
-    button svg path
+    .main-primaryFigures-buttons-move path
     {
         stroke: white;
         stroke-width:10px;        
     }
 
-    button svg circle
+    .main-primaryFigures-buttons-move circle
     {
         fill: transparent;
+    }
+
+    .main-primaryFigures-buttons-play
+    {
+        fill: white;
+        stroke: white;
+    }
+
+    .main-primaryFigures-buttons-pause
+    {
+        fill: none;
+        stroke: white;
+        stroke-miterlimit: 10;
+        stroke-width: 20px;
     }
 }
 

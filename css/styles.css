@@ -319,13 +319,24 @@ main .main-socialMedia {
   width: 30px;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
-.main-primaryFigures-buttons button svg path {
+.main-primaryFigures-buttons .main-primaryFigures-buttons-move path {
   stroke: white;
   stroke-width: 10px;
 }
-.main-primaryFigures-buttons button svg circle {
+.main-primaryFigures-buttons .main-primaryFigures-buttons-move circle {
   fill: transparent;
+}
+.main-primaryFigures-buttons .main-primaryFigures-buttons-play {
+  fill: white;
+  stroke: white;
+}
+.main-primaryFigures-buttons .main-primaryFigures-buttons-pause {
+  fill: none;
+  stroke: white;
+  stroke-miterlimit: 10;
+  stroke-width: 20px;
 }
 
 .main-secondaryFigures figure {
