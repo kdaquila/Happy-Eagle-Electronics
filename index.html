@@ -15,8 +15,8 @@
 </head>
 <body>    
     <header>
-        <a class="header-logo" href="index.html"><img src="img/happyEagleLogo-01.svg" alt="logo" width="320"></a>        
-        <nav class="header-primaryNav">
+        <a class="logo" href="index.html"><img src="img/happyEagleLogo-01.svg" alt="logo" width="320"></a>        
+        <nav class="primaryNav"> <!-- replace header-primaryNav-->
             <ul>
                 <li><a href="notfinished.html">Office</a></li>
                 <li><a href="notfinished.html">OS</a></li>
@@ -25,101 +25,103 @@
                 <li><a href="notfinished.html">Deals</a></li>
             </ul>
         </nav>
-        <nav class="header-secondaryNav">
+        <nav class="secondaryNav"> <!-- replace header-primaryNav-->
             <ul>
-                <li id="header-secondaryNav-menuButton"><a>Menu<img src="img/dropDownArrow-01.svg" alt="arrow" width="20"></a></li>
-                <li id="header-secondaryNav-searchButton"><a href="notfinished.html">Search<img src="img/search_icon-01.svg" alt="search" width="20"></a></li>
-                <li id="header-secondaryNav-cartButton"><a href="notfinished.html">Cart<img src="img/cart_icon-01.svg" alt="cart" width="20"></a></li>
-                <li id="header-secondaryNav-signinButton"><a href="notfinished.html">Sign in<img src="img/signinIcon-01.svg" alt="sign in" width="20"></a></li>
+                <li><button>Menu<img src="img/dropDownArrow-01.svg" alt="arrow" width="20"></button></li> <!-- replace header-secondaryNav-menuButton -->
+                <li><a href="notfinished.html">Search<img src="img/search_icon-01.svg" alt="search" width="20"></a></li> <!-- replace header-secondaryNav-searchButton -->
+                <li><a href="notfinished.html">Cart<img src="img/cart_icon-01.svg" alt="cart" width="20"></a></li> <!-- replace header-secondaryNav-cartButton -->
+                <li><a href="notfinished.html">Login<img src="img/signinIcon-01.svg" alt="sign in" width="20"></a></li> <!-- replace header-secondaryNav-signinButton -->
             </ul>
         </nav>
     </header>
 
     <main>    
-        <section class="main-primaryFigures">
-            <figure id="figure-A" class="main-primaryFigures-currState">
-                <img src="img/typingOnLaptop_1500x562.png" alt="Laptop Computer" title="Laptop Computer" width="640">
-                <figcaption>
-                    <h1>Need Speed?</h1>
-                    <p>Explore the latest technology</p>
-                    <button><a href="notfinished.html">Shop Now<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><polyline class="line" points="17 42 33 26 17 10"/></svg></a></button>
-                </figcaption>
-                <div class="main-primaryFigures-prevButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><polyline class="line" points="33 10 17 26 33 42"/></svg></div>
-                <div class="main-primaryFigures-nextButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><polyline class="line" points="17 42 33 26 17 10"/></svg></div>                    
-            </figure> 
+        <section class="primarySection"> <!-- replace main-primaryFigures  -->
 
-            <figure id="figure-B" class="main-primaryFigures-hiddenState">
-                <img src="img/blur-communication-computer_1500x562.png" alt="Laptop Computer" title="Laptop Computer" width="640">
-                <figcaption>
-                    <h1>On the Move!</h1>
-                    <p>Order a fast, new laptop today.</p>
-                    <button><a href="notfinished.html">Shop Now<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><polyline class="line" points="17 42 33 26 17 10"/></svg></a></button>
-                </figcaption>
-                <div class="main-primaryFigures-prevButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><polyline class="line" points="33 10 17 26 33 42"/></svg></div>
-                <div class="main-primaryFigures-nextButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><polyline class="line" points="17 42 33 26 17 10"/></svg></div>                    
-            </figure>
+            <div class="primarySection-figureSet">
+                <figure class="primarySection-figure-darkTheme"> <!-- replace .main-primaryFigures-currState--> <!-- replace #figure-A -->
+                    <img src="img/typingOnLaptop_1500x562.png" alt="Laptop Computer" title="Laptop Computer" width="640">
+                    <figcaption>
+                        <h1>Need Speed?</h1>
+                        <p>Explore the latest technology</p>
+                        <button><a href="notfinished.html">Shop Now<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><polyline points="17 42 33 26 17 10"/></svg></a></button>
+                    </figcaption>
+                    <button class="primarySection-prevButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><polyline points="33 10 17 26 33 42"/></svg></button> <!-- replace main-primaryFigures-prevButton-->
+                    <button class="primarySection-nextButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><polyline points="17 42 33 26 17 10"/></svg></button> <!-- replace main-primaryFigures-nextButton-->                   
+                </figure> 
 
-            <div class="main-primaryFigures-buttons">
-                <button class="main-primaryFigures-buttons-move"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g><circle class="cls-1" cx="50" cy="50" r="39.5"/><path d="M50,13A37,37,0,1,1,13,50,37,37,0,0,1,50,13m0-5A42,42,0,1,0,92,50,42,42,0,0,0,50,8Z"/></g></svg></button>
-                <button class="main-primaryFigures-buttons-move"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g><circle class="cls-1" cx="50" cy="50" r="39.5"/><path d="M50,13A37,37,0,1,1,13,50,37,37,0,0,1,50,13m0-5A42,42,0,1,0,92,50,42,42,0,0,0,50,8Z"/></g></svg></button>
-                <button class="main-primaryFigures-buttons-play"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon class="cls-1" points="97.58 50 12.71 1 12.71 99 97.58 50"/></svg></button>
-                <button class="main-primaryFigures-buttons-pause"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><line class="cls-1" x1="25" y1="2.5" x2="25" y2="97.5"/><line class="cls-1" x1="75" y1="3" x2="75" y2="98"/></svg></button>
+                <figure class="primarySection-figure-brightTheme">
+                    <img src="img/blur-communication-computer_1500x562.png" alt="Laptop Computer" title="Laptop Computer" width="640">
+                    <figcaption>
+                        <h1>On the Move!</h1>
+                        <p>Order a fast, new laptop today.</p>
+                        <button><a href="notfinished.html">Shop Now<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><polyline class="line" points="17 42 33 26 17 10"/></svg></a></button>
+                    </figcaption>
+                    <button class="primarySection-prevButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><polyline points="33 10 17 26 33 42"/></svg></button> <!-- replace main-primaryFigures-prevButton-->
+                    <button class="primarySection-nextButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><polyline points="17 42 33 26 17 10"/></svg></button> <!-- replace main-primaryFigures-nextButton-->                   
+                </figure>
             </div>
 
+            <div class="primarySection-buttonSet"> <!-- replace main-primaryFigures  -->                
+                <button class="primarySection-moveButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g><circle class="cls-1" cx="50" cy="50" r="39.5"/><path d="M50,13A37,37,0,1,1,13,50,37,37,0,0,1,50,13m0-5A42,42,0,1,0,92,50,42,42,0,0,0,50,8Z"/></g></svg></button>  <!-- replace main-primaryFigures-buttons-move  -->
+                <button class="primarySection-moveButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g><circle class="cls-1" cx="50" cy="50" r="39.5"/><path d="M50,13A37,37,0,1,1,13,50,37,37,0,0,1,50,13m0-5A42,42,0,1,0,92,50,42,42,0,0,0,50,8Z"/></g></svg></button>
+                <button class="primarySection-playButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon class="cls-1" points="97.58 50 12.71 1 12.71 99 97.58 50"/></svg></button> <!-- replace main-primaryFigures-buttons-play -->
+                <button class="primarySection-pauseButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><line class="cls-1" x1="25" y1="2.5" x2="25" y2="97.5"/><line class="cls-1" x1="75" y1="3" x2="75" y2="98"/></svg></button> <!-- replace main-primaryFigures-buttons-pause -->
+            </div>
+
+        </section>        
+        
+        <section class="secondarySection"> <!-- replace main-secondaryFigures  --> 
+            <div class="secondarySection-figureSet">
+                <figure>
+                    <img src="img/close-up-contemporary-device_280x180.png" alt="Laptop Computer" title="Laptop Computer" width="320">
+                    <figcaption>
+                        <h1>Save Big Money!</h1>
+                        <p>Get more work done on even on the go.</p>
+                        <button><a href="notfinished.html">Shop Now<img src="img/rightArrow-01.svg" alt="arrow" width="20"></a></button>
+                    </figcaption>                
+                </figure>
+
+                <figure>
+                    <img src="img/blur-close-up-device_280x180.png" alt="Laptop Computer" title="Laptop Computer" width="320">
+                    <figcaption>
+                        <h1>Tonight is Game Night!</h1>
+                        <p>Endless fun. Endless possibilities. All starting at a low price.</p>
+                        <button><a href="notfinished.html">Shop Now<img src="img/rightArrow-01.svg" alt="arrow" width="20"></a></button>
+                    </figcaption>
+                </figure>
+            
+                <figure>
+                    <img src="img/adult-analysis-chart_280x180.png" alt="Laptop Computer" title="Laptop Computer" width="320">
+                    <figcaption>
+                        <h1>Time to Shine</h1>
+                        <p>Make an big impact with a new laptop or tablet.</p>
+                        <button><a href="notfinished.html">Shop Now<img src="img/rightArrow-01.svg" alt="arrow" width="20"></a></button>
+                    </figcaption>
+                </figure>
+            
+                <figure>
+                    <img src="img/apple-internet-iphone_280x180.png" alt="Laptop Computer" title="Laptop Computer" width="320">
+                    <figcaption>
+                        <h1>Always with You</h1>
+                        <p>Ultimate performance. Ultra low weight. Get the right tools for the job.</p>
+                        <button><a href="notfinished.html">Shop Now<img src="img/rightArrow-01.svg" alt="arrow" width="20"></a></button>
+                    </figcaption>
+                </figure>
+            </div>        
         </section>
 
-        
-        
-        <section class="main-secondaryFigures">
-            <figure>
-                <img src="img/close-up-contemporary-device_280x180.png" alt="Laptop Computer" title="Laptop Computer" width="320">
-                <figcaption>
-                    <h1>Save Big Money!</h1>
-                    <p>Get more work done on even on the go.</p>
-                    <button><a href="notfinished.html">Shop Now<img src="img/rightArrow-01.svg" alt="arrow" width="20"></a></button>
-                </figcaption>
-                
-            </figure>
-
-            <figure>
-                <img src="img/blur-close-up-device_280x180.png" alt="Laptop Computer" title="Laptop Computer" width="320">
-                <figcaption>
-                    <h1>Tonight is Game Night!</h1>
-                    <p>Endless fun. Endless possibilities. All starting at a low price.</p>
-                    <button><a href="notfinished.html">Shop Now<img src="img/rightArrow-01.svg" alt="arrow" width="20"></a></button>
-                </figcaption>
-            </figure>
-        
-            <figure>
-                <img src="img/adult-analysis-chart_280x180.png" alt="Laptop Computer" title="Laptop Computer" width="320">
-                <figcaption>
-                    <h1>Time to Shine</h1>
-                    <p>Make an big impact with a new laptop or tablet.</p>
-                    <button><a href="notfinished.html">Shop Now<img src="img/rightArrow-01.svg" alt="arrow" width="20"></a></button>
-                </figcaption>
-            </figure>
-        
-            <figure>
-                <img src="img/apple-internet-iphone_280x180.png" alt="Laptop Computer" title="Laptop Computer" width="320">
-                <figcaption>
-                    <h1>Always with You</h1>
-                    <p>Ultimate performance. Ultra low weight. Get the right tools for the job.</p>
-                    <button><a href="notfinished.html">Shop Now<img src="img/rightArrow-01.svg" alt="arrow" width="20"></a></button>
-                </figcaption>
-            </figure>        
-        </section>
-
-        <section class="main-socialMedia">
-                <span>Follow Happy Eagle</span>
-                <a href="http://facebook.com"><img src="img/facebook_icon.svg" alt="facebook" width="50"></a> 
-                <a href="http://twitter.com"><img src="img/twitter_icon.svg" alt="facebook" width="50"></a> 
-                <a href="http://linkedin.com"><img src="img/linkedin_icon-01.svg" alt="facebook" width="50"></a> 
+        <section class="socialMediaSection">
+            <span>Follow Happy Eagle</span>
+            <a href="http://facebook.com"><img src="img/facebook_icon.svg" alt="facebook" width="50"></a> 
+            <a href="http://twitter.com"><img src="img/twitter_icon.svg" alt="facebook" width="50"></a> 
+            <a href="http://linkedin.com"><img src="img/linkedin_icon-01.svg" alt="facebook" width="50"></a> 
         </section>
     </main>
      
     <footer>
-        <section class="footer-primaryLinks">        
-            <nav>
+        <section class="primarySection">  <!-- replace footer-primaryLinks-->      
+            <div class="primarySection-navMenu">
                 <h1>New Products</h1>
                 <ul>
                     <li><a href="notfinished.html">NEW MegaSpec 8</a></li>
@@ -131,9 +133,9 @@
                     <li><a href="notfinished.html">Computer Vision</a></li>
                     <li><a href="notfinished.html">Software</a></li>
                 </ul>
-            </nav>
+            </div>
 
-            <nav>
+            <div class="primarySection-navMenu">
                 <h1>Eagle Store</h1>
                 <ul>
                     <li><a href="notfinished.html">Account</a></li>
@@ -143,18 +145,18 @@
                     <li><a href="notfinished.html">Order Tracking</a></li>
                     <li><a href="notfinished.html">Store Locations</a></li>
                 </ul>
-            </nav>
+            </div>
 
-            <nav>
+            <div class="primarySection-navMenu">
                 <h1>Education</h1>
                 <ul>
                     <li><a href="notfinished.html">Software for Students</a></li>
                     <li><a href="notfinished.html">Software for Schools</a></li>
                     <li><a href="notfinished.html">Deals for Families</a></li>
                 </ul>
-            </nav>
+            </div>
 
-            <nav>
+            <div class="primarySection-navMenu">
                 <h1>Business</h1>
                 <ul>
                     <li><a href="notfinished.html">Happy Eagle Nest</a></li>
@@ -162,9 +164,9 @@
                     <li><a href="notfinished.html">Financial Services</a></li>
                     <li><a href="notfinished.html">Happy Eagle Partnerss</a></li>
                 </ul>
-            </nav>
+            </div>
 
-            <nav>
+            <div class="primarySection-navMenu">
                 <h1>Developer</h1>
                 <ul>
                     <li><a href="notfinished.html">Code Editor</a></li>
@@ -172,9 +174,9 @@
                     <li><a href="notfinished.html">Videos</a></li>
                     <li><a href="notfinished.html">Events</a></li>
                 </ul>
-            </nav>
+            </div>
 
-            <nav>
+            <div class="primarySection-navMenu">
                 <h1>Company</h1>
                 <ul>
                     <li><a href="notfinished.html">Careers</a></li>
@@ -185,24 +187,20 @@
                     <li><a href="notfinished.html">Security</a></li>
                     <li><a href="notfinished.html">Accessibility</a></li>
                 </ul>
-            </nav>
+            </div>
         </section>
 
-        <section class="footer-secondaryLinks">
-            <div class="languageSelector">
-                <img src="img/world_icon-01.svg" alt="world icon">English (United States)
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="notfinished.html">Sitemap</a></li>
-                    <li><a href="notfinished.html">Contact Us</a></li>
-                    <li><a href="notfinished.html">Privacy</a></li>
-                    <li><a href="notfinished.html">Trademarks</a></li>
-                    <li><a href="notfinished.html">Terms of Use</a></li>
-                    <li><a href="notfinished.html">Ads</a></li>
-                    <li>© Happy Eagle 2019</li>
-                </ul>
-            </nav>            
+        <section class="secondarySection">
+            <button class="secondarySection-languageSelectorButton"><img src="img/world_icon-01.svg" alt="world icon">English (United States)</button>
+            <ul class="secondarySection-miscMenu">
+                <li><a href="notfinished.html">Sitemap</a></li>
+                <li><a href="notfinished.html">Contact Us</a></li>
+                <li><a href="notfinished.html">Privacy</a></li>
+                <li><a href="notfinished.html">Trademarks</a></li>
+                <li><a href="notfinished.html">Terms of Use</a></li>
+                <li><a href="notfinished.html">Ads</a></li>
+                <li>© Happy Eagle 2019</li>
+            </ul>         
         </section>
     </footer>
     
