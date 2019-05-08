@@ -15,7 +15,7 @@ header
     align-items: center;
 }
 
-.header-logo
+header .logo
 {
     img
     {
@@ -24,7 +24,7 @@ header
     }    
 }
 
-.header-primaryNav 
+header .primaryNav 
 {
     margin-right: auto;    
 
@@ -56,7 +56,7 @@ header
     }
 }   
 
-.header-secondaryNav
+header .secondaryNav
 {
     ul {
         display: flex;
@@ -93,9 +93,17 @@ header
         border-bottom: solid black 2px;
     }
 
-    li#header-secondaryNav-menuButton
+    li button
     {
         cursor: pointer;
+        background: none;
+        border: none;
+        border-bottom: solid transparent 2px;
+    }
+
+    li button:hover
+    {
+        border-bottom: solid black 2px;
     }
 }
 
@@ -105,7 +113,7 @@ main
     min-width: $page-minWidth;
     margin: 0 auto;
 
-    .main-secondaryFigures
+    .secondarySection-figureSet
     {
         display: flex;
         flex-flow: row nowrap;
@@ -113,7 +121,7 @@ main
         margin: 20px 0 60px 0;
     }
 
-    .main-socialMedia
+    .socialMediaSection
     {
         width: $page-width;
         min-width: $page-minWidth;
@@ -123,13 +131,13 @@ main
     }
 }
 
-.main-primaryFigures
+main .primarySection
 { 
     position: relative;
     overflow: hidden;
 }
 
-.main-primaryFigures figure
+main .primarySection figure
 {       
     img
     {
@@ -145,7 +153,7 @@ main
         align-content: flex-end;
     }
 
-    .main-primaryFigures-nextButton
+    .primarySection-nextButton
     {
         position: absolute;
         top: 50%;
@@ -155,7 +163,7 @@ main
         cursor: pointer;
     }
 
-    .main-primaryFigures-prevButton
+    .primarySection-prevButton
     {
         position: absolute;
         top: 50%;
@@ -165,14 +173,14 @@ main
         cursor: pointer;
     }
 
-    .main-primaryFigures-nextButton .line
+    .primarySection-nextButton .line
     {
         fill:none;
         stroke-miterlimit:10;
         stroke-width:3px;
     }        
 
-    .main-primaryFigures-prevButton .line
+    .primarySection-prevButton .line
     {
         fill:none;
         stroke-miterlimit:10;
@@ -180,7 +188,7 @@ main
     }    
 }
 
-.main-primaryFigures figcaption
+main .primarySection figcaption
 {
     h1 
     {
@@ -234,8 +242,11 @@ main
     }
 }   
 
-.main-primaryFigures #figure-A
+main .primarySection-figure-darkTheme
 {
+    position: relative;
+    overflow: hidden;
+
     figcaption
     {
         color: white;    
@@ -261,19 +272,22 @@ main
         stroke:black;
     }
 
-    .main-primaryFigures-nextButton .line
+    .primarySection-prevButton .line
     {
         stroke: white;
     }
 
-    .main-primaryFigures-prevButton .line
+    .primarySection-nextButton .line
     {
         stroke: white;
     }
 }    
 
-.main-primaryFigures #figure-B
+main .primarySection-figure-brightTheme
 {
+    position: relative;
+    overflow: hidden;
+
     figcaption
     {
         color: black;    
@@ -298,92 +312,37 @@ main
     {  
         stroke:white;
     }
+
+    .primarySection-nextButton
+    {
+        background: none;
+        border: none;
+    }
+
+    .primarySection-prevButton
+    {
+        background: none;
+        border: none;
+    }
     
-    .main-primaryFigures-nextButton .line
+    .primarySection-nextButton .line
     {
         stroke: black;
     }
 
-    .main-primaryFigures-prevButton .line
+    .primarySection-prevButton .line
     {
         stroke: black;
     }
 }
 
-.main-primaryFigures #figure-C
+main .primarySection-figure-darkTheme
 {
-    figcaption
-    {
-        color: black;    
-        left: 40px;
-        top: 50%;     
-        transform: translateY(-50%);   
-        padding: 30px;
-        width: 350px;
-    }
-
-    figcaption button
-    {
-        background-color: black;
-    }
-
-    figcaption button a
-    {
-        color: white;
-    }
-
-    figcaption svg .line
-    {  
-        stroke:white;
-    }
-    
-    .main-primaryFigures-nextButton .line
-    {
-        stroke: black;
-    }
-
-    .main-primaryFigures-prevButton .line
-    {
-        stroke: black;
-    }
-}
-
-.main-primaryFigures #figure-D
-{
-    figcaption
-    {
-        color: black;    
-        left: 40px;
-        top: 50%;     
-        transform: translateY(-50%);   
-        padding: 30px;
-        width: 350px;
-    }
-
-    figcaption button
-    {
-        background-color: black;
-    }
-
-    figcaption button a
-    {
-        color: white;
-    }
-
-    figcaption svg .line
-    {  
-        stroke:white;
-    }
-    
-    .main-primaryFigures-nextButton .line
-    {
-        stroke: black;
-    }
-
-    .main-primaryFigures-prevButton .line
-    {
-        stroke: black;
-    }
+    display: block;
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 10;
 }
 
 .main-primaryFigures-prevState
@@ -394,16 +353,8 @@ main
     right: 0;
     z-index: 11;
 }
-.main-primaryFigures-currState
-{
-    display: block;
-    position: relative;
-    top: 0;
-    right: 0;
-    z-index: 10;
-}
 
-.main-primaryFigures-nextState
+main .primarySection-nextState
 {
     display: block;
     position: absolute;
@@ -412,7 +363,7 @@ main
     z-index: 11;
 }
 
-.main-primaryFigures-hiddenState
+.primarySection-hiddenState
 {
     display: none;
     position: absolute;
@@ -420,7 +371,7 @@ main
     left: 0;
 }
 
-.main-primaryFigures-inactiveState
+main .primarySection-inactiveState
 {
     display: block;
     position: absolute;
@@ -429,14 +380,14 @@ main
     z-index: 11;
 }
 
-.main-primaryFigures-activeState
+main .primarySection-activeState
 {
     display: block;
     position: relative;
     z-index: 12;
 }
 
-.main-primaryFigures-buttons
+main .primarySection-buttonSet
 {
     position: absolute;
     bottom: 0;
@@ -453,24 +404,24 @@ main
         cursor: pointer;
     }
 
-    .main-primaryFigures-buttons-move path
+    .primarySection-moveButton path
     {
         stroke: white;
         stroke-width:10px;        
     }
 
-    .main-primaryFigures-buttons-move circle
+    .primarySection-moveButton circle
     {
         fill: transparent;
     }
 
-    .main-primaryFigures-buttons-play
+    .primarySection-playButton
     {
         fill: white;
         stroke: white;
     }
 
-    .main-primaryFigures-buttons-pause
+    .primarySection-pauseButton
     {
         fill: none;
         stroke: white;
@@ -479,7 +430,7 @@ main
     }
 }
 
-.main-secondaryFigures figure
+main .secondarySection figure
 {
     box-sizing: border-box;   
     width: calc((100% - 3*20px)/4);
@@ -502,7 +453,7 @@ main
     }
 }
 
-.main-secondaryFigures figcaption
+main .secondarySection figcaption
 {
     h1
     {                
@@ -547,7 +498,7 @@ main
     }
 }
 
-.main-socialMedia
+main .socialMediaSection
 {
     span
     {
@@ -571,7 +522,7 @@ footer
     margin-top: 10px;
 }
 
-.footer-primaryLinks
+footer .primarySection
 {
     width: $page-width;    
     min-width: $page-minWidth;
@@ -586,7 +537,7 @@ footer
     }
 }
 
-.footer-primaryLinks nav
+footer .primarySection-navMenu
 {
     h1
     {
@@ -614,7 +565,7 @@ footer
     }
 }
 
-.footer-secondaryLinks
+footer .secondarySection
 {
     width: $page-width;
     min-width: $page-minWidth;
@@ -623,22 +574,25 @@ footer
     flex-flow: row nowrap;
     justify-content: space-between;
 
-    .languageSelector
+    .secondarySection-languageButton
     {
         cursor: pointer;
         font-size: $font-size-small;
         color: $font-color-lightGray;
     }
 
-    .languageSelector:hover
+    .secondarySection-languageButton:hover
     {
         color: $font-color-darkGray;
         text-decoration: underline;
     }    
 }
 
-.footer-secondaryLinks .languageSelector
+footer .secondarySection .secondarySection-languageButton
 {
+    background: none;
+    border: none;
+
     img 
     {
         width: $font-size-small;
@@ -647,7 +601,7 @@ footer
     }
 }
 
-.footer-secondaryLinks nav
+footer .secondarySection
 {
     ul
     {

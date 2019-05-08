@@ -11,49 +11,49 @@ header {
   align-items: center;
 }
 
-.header-logo img {
+header .logo img {
   height: 40px;
   width: auto;
 }
 
-.header-primaryNav {
+header .primaryNav {
   margin-right: auto;
 }
-.header-primaryNav ul {
+header .primaryNav ul {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   margin: 0;
 }
-.header-primaryNav li {
+header .primaryNav li {
   margin: 0 10px;
   padding: 5px 0;
   border-bottom: solid transparent 2px;
 }
-.header-primaryNav li a {
+header .primaryNav li a {
   font-size: 14px;
   color: black;
   text-decoration: none;
 }
-.header-primaryNav li:hover {
+header .primaryNav li:hover {
   border-bottom: solid black 2px;
 }
 
-.header-secondaryNav ul {
+header .secondaryNav ul {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   margin: 0;
 }
-.header-secondaryNav li {
+header .secondaryNav li {
   margin: 0 10px;
 }
-.header-secondaryNav li img {
+header .secondaryNav li img {
   width: auto;
   height: 30px;
   vertical-align: middle;
 }
-.header-secondaryNav li a {
+header .secondaryNav li a {
   font-size: 14px;
   color: black;
   text-decoration: none;
@@ -62,11 +62,17 @@ header {
   align-items: center;
   border-bottom: solid transparent 2px;
 }
-.header-secondaryNav li a:hover {
+header .secondaryNav li a:hover {
   border-bottom: solid black 2px;
 }
-.header-secondaryNav li#header-secondaryNav-menuButton {
+header .secondaryNav li button {
   cursor: pointer;
+  background: none;
+  border: none;
+  border-bottom: solid transparent 2px;
+}
+header .secondaryNav li button:hover {
+  border-bottom: solid black 2px;
 }
 
 main {
@@ -74,13 +80,13 @@ main {
   min-width: 1024px;
   margin: 0 auto;
 }
-main .main-secondaryFigures {
+main .secondarySection-figureSet {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   margin: 20px 0 60px 0;
 }
-main .main-socialMedia {
+main .socialMediaSection {
   width: 85%;
   min-width: 1024px;
   margin: 30px 0;
@@ -88,22 +94,22 @@ main .main-socialMedia {
   color: #505050;
 }
 
-.main-primaryFigures {
+main .primarySection {
   position: relative;
   overflow: hidden;
 }
 
-.main-primaryFigures figure img {
+main .primarySection figure img {
   width: 100%;
 }
-.main-primaryFigures figure figcaption {
+main .primarySection figure figcaption {
   position: absolute;
   text-align: left;
   display: flex;
   flex-flow: column nowrap;
   align-content: flex-end;
 }
-.main-primaryFigures figure .main-primaryFigures-nextButton {
+main .primarySection figure .primarySection-nextButton {
   position: absolute;
   top: 50%;
   right: 0;
@@ -111,7 +117,7 @@ main .main-socialMedia {
   transform: translateY(-50%);
   cursor: pointer;
 }
-.main-primaryFigures figure .main-primaryFigures-prevButton {
+main .primarySection figure .primarySection-prevButton {
   position: absolute;
   top: 50%;
   left: 0;
@@ -119,54 +125,58 @@ main .main-socialMedia {
   transform: translateY(-50%);
   cursor: pointer;
 }
-.main-primaryFigures figure .main-primaryFigures-nextButton .line {
+main .primarySection figure .primarySection-nextButton .line {
   fill: none;
   stroke-miterlimit: 10;
   stroke-width: 3px;
 }
-.main-primaryFigures figure .main-primaryFigures-prevButton .line {
+main .primarySection figure .primarySection-prevButton .line {
   fill: none;
   stroke-miterlimit: 10;
   stroke-width: 3px;
 }
 
-.main-primaryFigures figcaption h1 {
+main .primarySection figcaption h1 {
   font-size: 50px;
 }
-.main-primaryFigures figcaption p {
+main .primarySection figcaption p {
   margin: 10px 0;
   font-size: 20px;
 }
-.main-primaryFigures figcaption button {
+main .primarySection figcaption button {
   margin-right: auto;
   margin-top: 10px;
   padding: 7px;
   border: none;
 }
-.main-primaryFigures figcaption button a {
+main .primarySection figcaption button a {
   text-decoration: none;
   font-size: 20px;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
 }
-.main-primaryFigures figcaption button a svg {
+main .primarySection figcaption button a svg {
   width: 20px;
 }
-.main-primaryFigures figcaption button a svg .line {
+main .primarySection figcaption button a svg .line {
   fill: none;
   stroke-miterlimit: 10;
   stroke-width: 3px;
 }
-.main-primaryFigures figcaption button a:hover {
+main .primarySection figcaption button a:hover {
   text-decoration: underline;
 }
-.main-primaryFigures figcaption button a img {
+main .primarySection figcaption button a img {
   width: 14px;
   margin-left: 0 4px;
 }
 
-.main-primaryFigures #figure-A figcaption {
+main .primarySection-figure-darkTheme {
+  position: relative;
+  overflow: hidden;
+}
+main .primarySection-figure-darkTheme figcaption {
   color: white;
   right: 20px;
   top: 50%;
@@ -174,23 +184,27 @@ main .main-socialMedia {
   padding: 30px;
   width: 300px;
 }
-.main-primaryFigures #figure-A figcaption button {
+main .primarySection-figure-darkTheme figcaption button {
   background-color: white;
 }
-.main-primaryFigures #figure-A figcaption button a {
+main .primarySection-figure-darkTheme figcaption button a {
   color: black;
 }
-.main-primaryFigures #figure-A figcaption svg .line {
+main .primarySection-figure-darkTheme figcaption svg .line {
   stroke: black;
 }
-.main-primaryFigures #figure-A .main-primaryFigures-nextButton .line {
+main .primarySection-figure-darkTheme .primarySection-prevButton .line {
   stroke: white;
 }
-.main-primaryFigures #figure-A .main-primaryFigures-prevButton .line {
+main .primarySection-figure-darkTheme .primarySection-nextButton .line {
   stroke: white;
 }
 
-.main-primaryFigures #figure-B figcaption {
+main .primarySection-figure-brightTheme {
+  position: relative;
+  overflow: hidden;
+}
+main .primarySection-figure-brightTheme figcaption {
   color: black;
   left: 40px;
   top: 50%;
@@ -198,68 +212,36 @@ main .main-socialMedia {
   padding: 30px;
   width: 350px;
 }
-.main-primaryFigures #figure-B figcaption button {
+main .primarySection-figure-brightTheme figcaption button {
   background-color: black;
 }
-.main-primaryFigures #figure-B figcaption button a {
+main .primarySection-figure-brightTheme figcaption button a {
   color: white;
 }
-.main-primaryFigures #figure-B figcaption svg .line {
+main .primarySection-figure-brightTheme figcaption svg .line {
   stroke: white;
 }
-.main-primaryFigures #figure-B .main-primaryFigures-nextButton .line {
+main .primarySection-figure-brightTheme .primarySection-nextButton {
+  background: none;
+  border: none;
+}
+main .primarySection-figure-brightTheme .primarySection-prevButton {
+  background: none;
+  border: none;
+}
+main .primarySection-figure-brightTheme .primarySection-nextButton .line {
   stroke: black;
 }
-.main-primaryFigures #figure-B .main-primaryFigures-prevButton .line {
+main .primarySection-figure-brightTheme .primarySection-prevButton .line {
   stroke: black;
 }
 
-.main-primaryFigures #figure-C figcaption {
-  color: black;
-  left: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 30px;
-  width: 350px;
-}
-.main-primaryFigures #figure-C figcaption button {
-  background-color: black;
-}
-.main-primaryFigures #figure-C figcaption button a {
-  color: white;
-}
-.main-primaryFigures #figure-C figcaption svg .line {
-  stroke: white;
-}
-.main-primaryFigures #figure-C .main-primaryFigures-nextButton .line {
-  stroke: black;
-}
-.main-primaryFigures #figure-C .main-primaryFigures-prevButton .line {
-  stroke: black;
-}
-
-.main-primaryFigures #figure-D figcaption {
-  color: black;
-  left: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 30px;
-  width: 350px;
-}
-.main-primaryFigures #figure-D figcaption button {
-  background-color: black;
-}
-.main-primaryFigures #figure-D figcaption button a {
-  color: white;
-}
-.main-primaryFigures #figure-D figcaption svg .line {
-  stroke: white;
-}
-.main-primaryFigures #figure-D .main-primaryFigures-nextButton .line {
-  stroke: black;
-}
-.main-primaryFigures #figure-D .main-primaryFigures-prevButton .line {
-  stroke: black;
+main .primarySection-figure-darkTheme {
+  display: block;
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 10;
 }
 
 .main-primaryFigures-prevState {
@@ -270,15 +252,7 @@ main .main-socialMedia {
   z-index: 11;
 }
 
-.main-primaryFigures-currState {
-  display: block;
-  position: relative;
-  top: 0;
-  right: 0;
-  z-index: 10;
-}
-
-.main-primaryFigures-nextState {
+main .primarySection-nextState {
   display: block;
   position: absolute;
   top: 0;
@@ -286,14 +260,14 @@ main .main-socialMedia {
   z-index: 11;
 }
 
-.main-primaryFigures-hiddenState {
+.primarySection-hiddenState {
   display: none;
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.main-primaryFigures-inactiveState {
+main .primarySection-inactiveState {
   display: block;
   position: absolute;
   top: 0;
@@ -301,13 +275,13 @@ main .main-socialMedia {
   z-index: 11;
 }
 
-.main-primaryFigures-activeState {
+main .primarySection-activeState {
   display: block;
   position: relative;
   z-index: 12;
 }
 
-.main-primaryFigures-buttons {
+main .primarySection-buttonSet {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -315,41 +289,41 @@ main .main-socialMedia {
   margin: 10px auto;
   z-index: 12;
 }
-.main-primaryFigures-buttons button {
+main .primarySection-buttonSet button {
   width: 30px;
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
-.main-primaryFigures-buttons .main-primaryFigures-buttons-move path {
+main .primarySection-buttonSet .primarySection-moveButton path {
   stroke: white;
   stroke-width: 10px;
 }
-.main-primaryFigures-buttons .main-primaryFigures-buttons-move circle {
+main .primarySection-buttonSet .primarySection-moveButton circle {
   fill: transparent;
 }
-.main-primaryFigures-buttons .main-primaryFigures-buttons-play {
+main .primarySection-buttonSet .primarySection-playButton {
   fill: white;
   stroke: white;
 }
-.main-primaryFigures-buttons .main-primaryFigures-buttons-pause {
+main .primarySection-buttonSet .primarySection-pauseButton {
   fill: none;
   stroke: white;
   stroke-miterlimit: 10;
   stroke-width: 20px;
 }
 
-.main-secondaryFigures figure {
+main .secondarySection figure {
   box-sizing: border-box;
   width: calc((100% - 3*20px)/4);
   margin: 10px 0;
   display: flex;
   flex-flow: column nowrap;
 }
-.main-secondaryFigures figure img {
+main .secondarySection figure img {
   width: 100%;
 }
-.main-secondaryFigures figure figcaption {
+main .secondarySection figure figcaption {
   flex: 1 1 auto;
   display: flex;
   flex-flow: column nowrap;
@@ -357,22 +331,22 @@ main .main-socialMedia {
   margin: 30px 0 0 0;
 }
 
-.main-secondaryFigures figcaption h1 {
+main .secondarySection figcaption h1 {
   font-size: 20px;
   font-weight: bold;
   color: #282828;
 }
-.main-secondaryFigures figcaption p {
+main .secondarySection figcaption p {
   margin: 10px 0 0 0;
   font-size: 14px;
 }
-.main-secondaryFigures figcaption button {
+main .secondarySection figcaption button {
   background-color: white;
   padding: 0;
   border: none;
   margin-top: 10px;
 }
-.main-secondaryFigures figcaption button a {
+main .secondarySection figcaption button a {
   text-decoration: none;
   color: #2874cc;
   font-size: 14px;
@@ -380,18 +354,18 @@ main .main-socialMedia {
   flex-flow: row nowrap;
   align-items: center;
 }
-.main-secondaryFigures figcaption button a:hover {
+main .secondarySection figcaption button a:hover {
   text-decoration: underline;
 }
-.main-secondaryFigures figcaption button a img {
+main .secondarySection figcaption button a img {
   width: 14px;
   margin-left: 4px;
 }
 
-.main-socialMedia span {
+main .socialMediaSection span {
   margin-right: 10px;
 }
-.main-socialMedia img {
+main .socialMediaSection img {
   height: 40px;
   width: auto;
   vertical-align: middle;
@@ -405,7 +379,7 @@ footer {
   margin-top: 10px;
 }
 
-.footer-primaryLinks {
+footer .primarySection {
   width: 85%;
   min-width: 1024px;
   margin: 0 auto;
@@ -413,29 +387,29 @@ footer {
   flex-flow: row nowrap;
   justify-content: space-between;
 }
-.footer-primaryLinks nav {
+footer .primarySection nav {
   flex: 0 1 auto;
 }
 
-.footer-primaryLinks nav h1 {
+footer .primarySection-navMenu h1 {
   font-size: 20px;
   color: #282828;
   text-decoration: none;
 }
-.footer-primaryLinks nav li {
+footer .primarySection-navMenu li {
   margin: 15px 0;
 }
-.footer-primaryLinks nav a {
+footer .primarySection-navMenu a {
   color: #505050;
   text-decoration: none;
   font-size: 14px;
 }
-.footer-primaryLinks nav a:hover {
+footer .primarySection-navMenu a:hover {
   color: #282828;
   text-decoration: underline;
 }
 
-.footer-secondaryLinks {
+footer .secondarySection {
   width: 85%;
   min-width: 1024px;
   margin: 50px auto 0 auto;
@@ -443,37 +417,41 @@ footer {
   flex-flow: row nowrap;
   justify-content: space-between;
 }
-.footer-secondaryLinks .languageSelector {
+footer .secondarySection .secondarySection-languageButton {
   cursor: pointer;
   font-size: 14px;
   color: #505050;
 }
-.footer-secondaryLinks .languageSelector:hover {
+footer .secondarySection .secondarySection-languageButton:hover {
   color: #282828;
   text-decoration: underline;
 }
 
-.footer-secondaryLinks .languageSelector img {
+footer .secondarySection .secondarySection-languageButton {
+  background: none;
+  border: none;
+}
+footer .secondarySection .secondarySection-languageButton img {
   width: 14px;
   margin-right: 7px;
   vertical-align: middle;
 }
 
-.footer-secondaryLinks nav ul {
+footer .secondarySection ul {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
 }
-.footer-secondaryLinks nav ul li {
+footer .secondarySection ul li {
   margin: 0 10px;
   font-size: 14px;
   color: #505050;
 }
-.footer-secondaryLinks nav ul li a {
+footer .secondarySection ul li a {
   text-decoration: none;
   color: #505050;
 }
-.footer-secondaryLinks nav ul li a:hover {
+footer .secondarySection ul li a:hover {
   color: #282828;
   text-decoration: underline;
 }

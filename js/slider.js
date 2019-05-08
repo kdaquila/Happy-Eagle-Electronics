@@ -1,21 +1,21 @@
-$('section.main-primaryFigures').each(function(){
+$('main .primarySection').each(function(){
     var $this = $(this);
     var $figures = $this.find('figure');
-    var $buttons = $this.find('.main-primaryFigures-buttons-move');
-    var $playButton = $this.find('.main-primaryFigures-buttons-play');
-    var $pauseButton = $this.find('.main-primaryFigures-buttons-pause');
-    var $nextButtons = $this.find('figure .main-primaryFigures-nextButton');
-    var $prevButtons = $this.find('figure .main-primaryFigures-prevButton');
+    var $moveButons = $this.find('.primarySection-moveButton');
+    var $playButton = $this.find('.primarySection-playButton');
+    var $pauseButton = $this.find('.primarySection-pauseButton');
+    var $nextButtons = $this.find('.primarySection-nextButton');
+    var $prevButtons = $this.find('.primarySection-prevButton');
     var nFigures = $figures.length;
     var currIndex = 0;
     var nextIndex = 1;
     var prevIndex = nFigures-1;
     var timeout;
-    var isAutoPlay = true;
+    var isAutoPlay = false;
 
     var currWidth = $('main').css('width');
-    $('.main-primaryFigures-prevState').css({width: currWidth, right: currWidth});
-    $('.main-primaryFigures-nextState').css({width: currWidth, left: currWidth})
+    $('.primarySection-prevState').css({width: currWidth, right: currWidth});
+    $('.primarySection-nextState').css({width: currWidth, left: currWidth})
 
     function next() {
         move(nextIndex);
@@ -32,13 +32,17 @@ $('section.main-primaryFigures').each(function(){
 
         function update()
         {
-            $figures.eq(newIndex).removeClass();
-            $figures.eq(newIndex).addClass('main-primaryFigures-currState');
-            $figures.eq(currIndex).removeClass();
-            $figures.eq(currIndex).addClass('main-primaryFigures-hiddenState');
+            $figures.eq(newIndex).removeClass('primarySection-hiddenState');
+            $figures.eq(newIndex).removeClass('primarySection-prevState');
+            $figures.eq(newIndex).removeClass('primarySection-nextState');
+            $figures.eq(newIndex).addClass('primarySection-currState');
+            $figures.eq(currIndex).removeClass('primarySection-currState');
+            $figures.eq(currIndex).removeClass('primarySection-prevState');
+            $figures.eq(currIndex).removeClass('primarySection-nextState');
+            $figures.eq(currIndex).addClass('primarySection-hiddenState');
 
-            $buttons.find('circle').css({fill: 'transparent'});
-            $buttons.eq(newIndex).find('circle').css({fill: 'white'});
+            $moveButons.find('circle').css({fill: 'transparent'});
+            $moveButons.eq(newIndex).find('circle').css({fill: 'white'});
 
             currIndex = newIndex;
             nextIndex = (currIndex+1)%nFigures;
@@ -52,15 +56,19 @@ $('section.main-primaryFigures').each(function(){
             newIndex == currIndex) {
                 return;
             }
-        else if (newIndex > currIndex) {         
-            $figures.eq(newIndex).removeClass();
-            $figures.eq(newIndex).addClass('main-primaryFigures-nextState');
+        else if (newIndex > currIndex) {       
+            $figures.eq(newIndex).removeClass('primarySection-hiddenState');
+            $figures.eq(newIndex).removeClass('primarySection-prevState');
+            $figures.eq(newIndex).removeClass('primarySection-nextState');
+            $figures.eq(newIndex).addClass('primarySection-nextState');
             $figures.eq(newIndex).css({left: currWidth, width: currWidth});
             $figures.eq(currIndex).animate({right: currWidth}, delay);
             $figures.eq(newIndex).animate({left: 0}, delay, update);
         } else if (newIndex < currIndex) {
-            $figures.eq(newIndex).removeClass();
-            $figures.eq(newIndex).addClass('main-primaryFigures-prevState');
+            $figures.eq(newIndex).removeClass('primarySection-hiddenState');
+            $figures.eq(newIndex).removeClass('primarySection-prevState');
+            $figures.eq(newIndex).removeClass('primarySection-nextState');
+            $figures.eq(newIndex).addClass('primarySection-prevState');
             $figures.eq(newIndex).css({right: currWidth, width: currWidth});
             $figures.eq(currIndex).animate({left: currWidth}, delay);
             $figures.eq(newIndex).animate({right: 0}, delay, update);
@@ -79,12 +87,12 @@ $('section.main-primaryFigures').each(function(){
     }
 
     // setup move buttons
-    $buttons.each(function(index){
+    $moveButons.each(function(index){
         $(this).on('click', function(){
             move(index);
         });
     });
-    $buttons.eq(currIndex).find('circle').css({fill: 'white'});
+    $moveButons.eq(currIndex).find('circle').css({fill: 'white'});
 
     // setup next buttons
     $nextButtons.each(function(index){
