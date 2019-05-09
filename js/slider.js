@@ -136,8 +136,8 @@ $(imageSliderSelector).each(function(){
     // setup button call backs
     $nextButtons.each(function(){$(this).on('click', next);});
     $prevButtons.each(function(){$(this).on('click', prev);});  
-    $playButton.each(function(){$(this).on('click', toggleAutoPlay)});
-    $pauseButton.each(function(){$(this).on('click', toggleAutoPlay)});
+    $playButton.on('click', toggleAutoPlay);
+    $pauseButton.on('click', toggleAutoPlay);
 
     // setup initial play/pause button visibility
     if (isAutoPlay == true) {
