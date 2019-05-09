@@ -1,3 +1,7 @@
+.hidden {
+  display: none !important;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -86,27 +90,8 @@ main {
   overflow: hidden;
 }
 
-.primaryFigureSection.prev {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 11;
-}
-
-.primaryFigureSection.next {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 11;
-}
-
-.primaryFigureSection.hidden {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
+.primaryFigureSection-figureSet {
+  position: relative;
 }
 
 .primaryFigureSection-figure {
@@ -114,6 +99,31 @@ main {
 }
 .primaryFigureSection-figure img {
   width: 100%;
+}
+
+.primaryFigureSection-figure.prev {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  z-index: 11;
+  width: 100%;
+}
+
+.primaryFigureSection-figure.next {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 11;
+  width: 100%;
+}
+
+.primaryFigureSection-figure.hidden {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .primaryFigureSection-figureCaption {
@@ -258,6 +268,14 @@ main {
 }
 .primaryFigureSection-moveButton svg circle {
   fill: transparent;
+}
+
+.primaryFigureSection-moveButton.marked svg path {
+  stroke: white;
+  stroke-width: 10px;
+}
+.primaryFigureSection-moveButton.marked svg circle {
+  fill: white;
 }
 
 .primaryFigureSection-playButton svg polygon {
