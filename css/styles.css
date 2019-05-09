@@ -11,49 +11,49 @@ header {
   align-items: center;
 }
 
-header .logo img {
+.headerLogo img {
   height: 40px;
   width: auto;
 }
 
-header .primaryNav {
+.headerPrimaryNav {
   margin-right: auto;
 }
-header .primaryNav ul {
+.headerPrimaryNav ul {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   margin: 0;
 }
-header .primaryNav li {
+.headerPrimaryNav li {
   margin: 0 10px;
   padding: 5px 0;
   border-bottom: solid transparent 2px;
 }
-header .primaryNav li a {
+.headerPrimaryNav li a {
   font-size: 14px;
   color: black;
   text-decoration: none;
 }
-header .primaryNav li:hover {
+.headerPrimaryNav li:hover {
   border-bottom: solid black 2px;
 }
 
-header .secondaryNav ul {
+.headerSecondaryNav ul {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   margin: 0;
 }
-header .secondaryNav li {
+.headerSecondaryNav li {
   margin: 0 10px;
 }
-header .secondaryNav li img {
+.headerSecondaryNav li img {
   width: auto;
   height: 30px;
   vertical-align: middle;
 }
-header .secondaryNav li a {
+.headerSecondaryNav li a {
   font-size: 14px;
   color: black;
   text-decoration: none;
@@ -62,16 +62,16 @@ header .secondaryNav li a {
   align-items: center;
   border-bottom: solid transparent 2px;
 }
-header .secondaryNav li a:hover {
+.headerSecondaryNav li a:hover {
   border-bottom: solid black 2px;
 }
-header .secondaryNav li button {
+.headerSecondaryNav li button {
   cursor: pointer;
   background: none;
   border: none;
   border-bottom: solid transparent 2px;
 }
-header .secondaryNav li button:hover {
+.headerSecondaryNav li button:hover {
   border-bottom: solid black 2px;
 }
 
@@ -80,103 +80,80 @@ main {
   min-width: 1024px;
   margin: 0 auto;
 }
-main .secondarySection-figureSet {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  margin: 20px 0 60px 0;
-}
-main .socialMediaSection {
-  width: 85%;
-  min-width: 1024px;
-  margin: 30px 0;
-  font-size: 20px;
-  color: #505050;
-}
 
-main .primarySection {
+.primaryFigureSection {
   position: relative;
   overflow: hidden;
 }
 
-main .primarySection figure img {
+.primaryFigureSection.prev {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 11;
+}
+
+.primaryFigureSection.next {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 11;
+}
+
+.primaryFigureSection.hidden {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.primaryFigureSection-figure {
+  position: relative;
+}
+.primaryFigureSection-figure img {
   width: 100%;
 }
-main .primarySection figure figcaption {
+
+.primaryFigureSection-figureCaption {
   position: absolute;
   text-align: left;
   display: flex;
   flex-flow: column nowrap;
   align-content: flex-end;
 }
-main .primarySection figure .primarySection-nextButton {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 70px;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-main .primarySection figure .primarySection-prevButton {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 70px;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-main .primarySection figure .primarySection-nextButton .line {
-  fill: none;
-  stroke-miterlimit: 10;
-  stroke-width: 3px;
-}
-main .primarySection figure .primarySection-prevButton .line {
-  fill: none;
-  stroke-miterlimit: 10;
-  stroke-width: 3px;
-}
-
-main .primarySection figcaption h1 {
+.primaryFigureSection-figureCaption h1 {
   font-size: 50px;
 }
-main .primarySection figcaption p {
+.primaryFigureSection-figureCaption p {
   margin: 10px 0;
   font-size: 20px;
 }
-main .primarySection figcaption button {
+.primaryFigureSection-figureCaption button {
   margin-right: auto;
   margin-top: 10px;
   padding: 7px;
   border: none;
 }
-main .primarySection figcaption button a {
+.primaryFigureSection-figureCaption button a {
   text-decoration: none;
   font-size: 20px;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
 }
-main .primarySection figcaption button a svg {
-  width: 20px;
+.primaryFigureSection-figureCaption button a:hover {
+  text-decoration: underline;
 }
-main .primarySection figcaption button a svg .line {
+.primaryFigureSection-figureCaption button a svg {
+  width: 20px;
   fill: none;
   stroke-miterlimit: 10;
   stroke-width: 3px;
 }
-main .primarySection figcaption button a:hover {
-  text-decoration: underline;
-}
-main .primarySection figcaption button a img {
-  width: 14px;
-  margin-left: 0 4px;
-}
 
-main .primarySection-figure-darkTheme {
-  position: relative;
-  overflow: hidden;
-}
-main .primarySection-figure-darkTheme figcaption {
+.primaryFigureSection-figureCaption.darkTheme {
   color: white;
   right: 20px;
   top: 50%;
@@ -184,27 +161,17 @@ main .primarySection-figure-darkTheme figcaption {
   padding: 30px;
   width: 300px;
 }
-main .primarySection-figure-darkTheme figcaption button {
+.primaryFigureSection-figureCaption.darkTheme button {
   background-color: white;
 }
-main .primarySection-figure-darkTheme figcaption button a {
+.primaryFigureSection-figureCaption.darkTheme button a {
   color: black;
 }
-main .primarySection-figure-darkTheme figcaption svg .line {
+.primaryFigureSection-figureCaption.darkTheme svg {
   stroke: black;
 }
-main .primarySection-figure-darkTheme .primarySection-prevButton .line {
-  stroke: white;
-}
-main .primarySection-figure-darkTheme .primarySection-nextButton .line {
-  stroke: white;
-}
 
-main .primarySection-figure-brightTheme {
-  position: relative;
-  overflow: hidden;
-}
-main .primarySection-figure-brightTheme figcaption {
+.primaryFigureSection-figureCaption.brightTheme {
   color: black;
   left: 40px;
   top: 50%;
@@ -212,76 +179,65 @@ main .primarySection-figure-brightTheme figcaption {
   padding: 30px;
   width: 350px;
 }
-main .primarySection-figure-brightTheme figcaption button {
+.primaryFigureSection-figureCaption.brightTheme button {
   background-color: black;
 }
-main .primarySection-figure-brightTheme figcaption button a {
+.primaryFigureSection-figureCaption.brightTheme button a {
   color: white;
 }
-main .primarySection-figure-brightTheme figcaption svg .line {
+.primaryFigureSection-figureCaption.brightTheme svg {
   stroke: white;
 }
-main .primarySection-figure-brightTheme .primarySection-nextButton {
+
+.primaryFigureSection-prevButton {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 70px;
+  transform: translateY(-50%);
+  cursor: pointer;
   background: none;
   border: none;
 }
-main .primarySection-figure-brightTheme .primarySection-prevButton {
+.primaryFigureSection-prevButton svg {
+  fill: none;
+  stroke-miterlimit: 10;
+  stroke-width: 3px;
+}
+
+.primaryFigureSection-prevButton.darkTheme svg {
+  stroke: white;
+}
+
+.primaryFigureSection-prevButton.brightTheme svg {
+  stroke: black;
+}
+
+.primaryFigureSection-nextButton {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 70px;
+  transform: translateY(-50%);
+  cursor: pointer;
   background: none;
   border: none;
 }
-main .primarySection-figure-brightTheme .primarySection-nextButton .line {
+.primaryFigureSection-nextButton svg {
+  fill: none;
+  stroke-miterlimit: 10;
+  stroke-width: 3px;
+}
+
+.primaryFigureSection-nextButton.darkTheme svg {
+  stroke: white;
+}
+
+.primaryFigureSection-nextButton.brightTheme svg {
   stroke: black;
 }
-main .primarySection-figure-brightTheme .primarySection-prevButton .line {
-  stroke: black;
-}
 
-main .primarySection-figure-darkTheme {
-  display: block;
-  position: relative;
-  top: 0;
-  right: 0;
-  z-index: 10;
-}
-
-.main-primaryFigures-prevState {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 11;
-}
-
-main .primarySection-nextState {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 11;
-}
-
-.primarySection-hiddenState {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-main .primarySection-inactiveState {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 11;
-}
-
-main .primarySection-activeState {
-  display: block;
-  position: relative;
-  z-index: 12;
-}
-
-main .primarySection-buttonSet {
+.primaryFigureSection-buttonSet {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -289,64 +245,74 @@ main .primarySection-buttonSet {
   margin: 10px auto;
   z-index: 12;
 }
-main .primarySection-buttonSet button {
+.primaryFigureSection-buttonSet button {
   width: 30px;
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
-main .primarySection-buttonSet .primarySection-moveButton path {
+
+.primaryFigureSection-moveButton svg path {
   stroke: white;
   stroke-width: 10px;
 }
-main .primarySection-buttonSet .primarySection-moveButton circle {
+.primaryFigureSection-moveButton svg circle {
   fill: transparent;
 }
-main .primarySection-buttonSet .primarySection-playButton {
+
+.primaryFigureSection-playButton svg polygon {
   fill: white;
   stroke: white;
 }
-main .primarySection-buttonSet .primarySection-pauseButton {
+
+.primaryFigureSection-pauseButton svg line {
   fill: none;
   stroke: white;
   stroke-miterlimit: 10;
   stroke-width: 20px;
 }
 
-main .secondarySection figure {
+.secondaryFigureSection-figureSet {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 20px 0 60px 0;
+}
+
+.secondaryFigureSection-figure {
   box-sizing: border-box;
   width: calc((100% - 3*20px)/4);
   margin: 10px 0;
   display: flex;
   flex-flow: column nowrap;
 }
-main .secondarySection figure img {
+.secondaryFigureSection-figure img {
   width: 100%;
 }
-main .secondarySection figure figcaption {
+
+.secondaryFigureSection-figureCaption {
   flex: 1 1 auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   margin: 30px 0 0 0;
 }
-
-main .secondarySection figcaption h1 {
+.secondaryFigureSection-figureCaption h1 {
   font-size: 20px;
   font-weight: bold;
   color: #282828;
 }
-main .secondarySection figcaption p {
+.secondaryFigureSection-figureCaption p {
   margin: 10px 0 0 0;
   font-size: 14px;
 }
-main .secondarySection figcaption button {
+.secondaryFigureSection-figureCaption button {
   background-color: white;
   padding: 0;
   border: none;
   margin-top: 10px;
 }
-main .secondarySection figcaption button a {
+.secondaryFigureSection-figureCaption button a {
   text-decoration: none;
   color: #2874cc;
   font-size: 14px;
@@ -354,18 +320,25 @@ main .secondarySection figcaption button a {
   flex-flow: row nowrap;
   align-items: center;
 }
-main .secondarySection figcaption button a:hover {
+.secondaryFigureSection-figureCaption button a:hover {
   text-decoration: underline;
 }
-main .secondarySection figcaption button a img {
+.secondaryFigureSection-figureCaption button a img {
   width: 14px;
   margin-left: 4px;
 }
 
-main .socialMediaSection span {
+.socialMediaSection {
+  width: 85%;
+  min-width: 1024px;
+  margin: 30px 0;
+  font-size: 20px;
+  color: #505050;
+}
+.socialMediaSection span {
   margin-right: 10px;
 }
-main .socialMediaSection img {
+.socialMediaSection img {
   height: 40px;
   width: auto;
   vertical-align: middle;
@@ -379,7 +352,7 @@ footer {
   margin-top: 10px;
 }
 
-footer .primarySection {
+.primaryFooterSection {
   width: 85%;
   min-width: 1024px;
   margin: 0 auto;
@@ -387,29 +360,29 @@ footer .primarySection {
   flex-flow: row nowrap;
   justify-content: space-between;
 }
-footer .primarySection nav {
+
+.primaryFooterSection-navMenu {
   flex: 0 1 auto;
 }
-
-footer .primarySection-navMenu h1 {
+.primaryFooterSection-navMenu h1 {
   font-size: 20px;
   color: #282828;
   text-decoration: none;
 }
-footer .primarySection-navMenu li {
+.primaryFooterSection-navMenu li {
   margin: 15px 0;
 }
-footer .primarySection-navMenu a {
+.primaryFooterSection-navMenu a {
   color: #505050;
   text-decoration: none;
   font-size: 14px;
 }
-footer .primarySection-navMenu a:hover {
+.primaryFooterSection-navMenu a:hover {
   color: #282828;
   text-decoration: underline;
 }
 
-footer .secondarySection {
+.secondaryFooterSection {
   width: 85%;
   min-width: 1024px;
   margin: 50px auto 0 auto;
@@ -417,41 +390,40 @@ footer .secondarySection {
   flex-flow: row nowrap;
   justify-content: space-between;
 }
-footer .secondarySection .secondarySection-languageButton {
+
+.secondaryFooterSection-languageButton {
   cursor: pointer;
   font-size: 14px;
   color: #505050;
-}
-footer .secondarySection .secondarySection-languageButton:hover {
-  color: #282828;
-  text-decoration: underline;
-}
-
-footer .secondarySection .secondarySection-languageButton {
   background: none;
   border: none;
 }
-footer .secondarySection .secondarySection-languageButton img {
+.secondaryFooterSection-languageButton img {
   width: 14px;
   margin-right: 7px;
   vertical-align: middle;
 }
 
-footer .secondarySection ul {
+.secondaryFooterSection-languageButton:hover {
+  color: #282828;
+  text-decoration: underline;
+}
+
+.secondaryFooterSection-miscMenu {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
 }
-footer .secondarySection ul li {
+.secondaryFooterSection-miscMenu li {
   margin: 0 10px;
   font-size: 14px;
   color: #505050;
 }
-footer .secondarySection ul li a {
+.secondaryFooterSection-miscMenu li a {
   text-decoration: none;
   color: #505050;
 }
-footer .secondarySection ul li a:hover {
+.secondaryFooterSection-miscMenu li a:hover {
   color: #282828;
   text-decoration: underline;
 }

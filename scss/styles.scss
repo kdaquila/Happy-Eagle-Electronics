@@ -15,7 +15,7 @@ header
     align-items: center;
 }
 
-header .logo
+.headerLogo
 {
     img
     {
@@ -24,7 +24,7 @@ header .logo
     }    
 }
 
-header .primaryNav 
+.headerPrimaryNav
 {
     margin-right: auto;    
 
@@ -56,9 +56,10 @@ header .primaryNav
     }
 }   
 
-header .secondaryNav
+.headerSecondaryNav
 {
-    ul {
+    ul 
+    {
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
@@ -112,84 +113,58 @@ main
     width: $page-width;
     min-width: $page-minWidth;
     margin: 0 auto;
-
-    .secondarySection-figureSet
-    {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        margin: 20px 0 60px 0;
-    }
-
-    .socialMediaSection
-    {
-        width: $page-width;
-        min-width: $page-minWidth;
-        margin: 30px 0;
-        font-size: $font-size-medium;
-        color: $font-color-lightGray;
-    }
 }
 
-main .primarySection
+.primaryFigureSection
 { 
     position: relative;
     overflow: hidden;
 }
 
-main .primarySection figure
-{       
-    img
+.primaryFigureSection.prev
+{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 11;
+}
+
+.primaryFigureSection.next
+{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+}
+
+.primaryFigureSection.hidden
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.primaryFigureSection-figure
+{
+    position: relative;
+
+    img 
     {
         width: 100%;
-    }
-
-    figcaption 
-    {
-        position: absolute;
-        text-align: left;        
-        display: flex;
-        flex-flow: column nowrap;
-        align-content: flex-end;
-    }
-
-    .primarySection-nextButton
-    {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        width: 70px;
-        transform: translateY(-50%);
-        cursor: pointer;
-    }
-
-    .primarySection-prevButton
-    {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 70px;
-        transform: translateY(-50%);
-        cursor: pointer;
-    }
-
-    .primarySection-nextButton .line
-    {
-        fill:none;
-        stroke-miterlimit:10;
-        stroke-width:3px;
-    }        
-
-    .primarySection-prevButton .line
-    {
-        fill:none;
-        stroke-miterlimit:10;
-        stroke-width:3px;
     }    
 }
 
-main .primarySection figcaption
+.primaryFigureSection-figureCaption 
 {
+    position: absolute;
+    text-align: left;        
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: flex-end;
+
     h1 
     {
         font-size: $font-size-large;    
@@ -218,176 +193,144 @@ main .primarySection figcaption
         align-items: center;
     }
 
-    button a svg
-    {
-        width: $font-size-medium;        
-
-        .line
-        {
-            fill:none;
-            stroke-miterlimit:10;
-            stroke-width:3px;
-        }
-    }
-
     button a:hover 
     {
         text-decoration: underline;
     }
 
-    button a img 
+    button a svg
     {
-        width: $font-size-small;
-        margin-left: 0 4px;
-    }
-}   
+        width: $font-size-medium;   
+        fill:none;
+        stroke-miterlimit:10;
+        stroke-width:3px;
+    }         
+}
 
-main .primarySection-figure-darkTheme
+.primaryFigureSection-figureCaption.darkTheme 
 {
-    position: relative;
-    overflow: hidden;
-
-    figcaption
-    {
-        color: white;    
-        right: 20px;
-        top: 50%;     
-        transform: translateY(-50%);           
-        padding: 30px;
-        width: 300px; 
-    }     
-
-    figcaption button
+    color: white;    
+    right: 20px;
+    top: 50%;     
+    transform: translateY(-50%);           
+    padding: 30px;
+    width: 300px;
+    
+    button
     {
         background-color: white;
     }
 
-    figcaption button a
+    button a
     {
         color: black;
     }
 
-    figcaption svg .line
+    svg
     {
         stroke:black;
     }
+}     
 
-    .primarySection-prevButton .line
-    {
-        stroke: white;
-    }
-
-    .primarySection-nextButton .line
-    {
-        stroke: white;
-    }
-}    
-
-main .primarySection-figure-brightTheme
+.primaryFigureSection-figureCaption.brightTheme 
 {
-    position: relative;
-    overflow: hidden;
+    color: black;    
+    left: 40px;
+    top: 50%;     
+    transform: translateY(-50%);   
+    padding: 30px;
+    width: 350px;    
 
-    figcaption
-    {
-        color: black;    
-        left: 40px;
-        top: 50%;     
-        transform: translateY(-50%);   
-        padding: 30px;
-        width: 350px;
-    }
-
-    figcaption button
+    button
     {
         background-color: black;
     }
 
-    figcaption button a
+    button a
     {
         color: white;
     }
 
-    figcaption svg .line
+    svg
     {  
         stroke:white;
     }
+}
 
-    .primarySection-nextButton
-    {
-        background: none;
-        border: none;
-    }
 
-    .primarySection-prevButton
+.primaryFigureSection-prevButton
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 70px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: none;
+    border: none;
+
+    svg
     {
-        background: none;
-        border: none;
+        fill:none;
+        stroke-miterlimit:10;
+        stroke-width:3px;
+    }          
+}
+
+.primaryFigureSection-prevButton.darkTheme
+{
+    svg
+    {
+        stroke: white;
     }
-    
-    .primarySection-nextButton .line
+}
+
+.primaryFigureSection-prevButton.brightTheme
+{
+    svg
     {
         stroke: black;
     }
+}
 
-    .primarySection-prevButton .line
+.primaryFigureSection-nextButton
+{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 70px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: none;
+    border: none;
+
+    svg
+    {
+        fill:none;
+        stroke-miterlimit:10;
+        stroke-width:3px;
+    }          
+}
+
+
+.primaryFigureSection-nextButton.darkTheme
+{
+    svg
+    {
+        stroke: white;
+    }
+}
+
+.primaryFigureSection-nextButton.brightTheme
+{
+    svg
     {
         stroke: black;
     }
 }
 
-main .primarySection-figure-darkTheme
-{
-    display: block;
-    position: relative;
-    top: 0;
-    right: 0;
-    z-index: 10;
-}
 
-.main-primaryFigures-prevState
-{
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 11;
-}
-
-main .primarySection-nextState
-{
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 11;
-}
-
-.primarySection-hiddenState
-{
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-main .primarySection-inactiveState
-{
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 11;
-}
-
-main .primarySection-activeState
-{
-    display: block;
-    position: relative;
-    z-index: 12;
-}
-
-main .primarySection-buttonSet
+.primaryFigureSection-buttonSet
 {
     position: absolute;
     bottom: 0;
@@ -403,34 +346,52 @@ main .primarySection-buttonSet
         border: none;
         cursor: pointer;
     }
+}
 
-    .primarySection-moveButton path
+.primaryFigureSection-moveButton 
+{
+    svg path
     {
         stroke: white;
-        stroke-width:10px;        
+        stroke-width:10px; 
     }
 
-    .primarySection-moveButton circle
+    svg circle
     {
         fill: transparent;
-    }
+    }    
+}
 
-    .primarySection-playButton
+.primaryFigureSection-playButton
+{
+    svg polygon
     {
-        fill: white;
-        stroke: white;
-    }
+       fill: white;
+        stroke: white; 
+    }    
+}
 
-    .primarySection-pauseButton
+.primaryFigureSection-pauseButton
+{
+    svg line
     {
         fill: none;
         stroke: white;
         stroke-miterlimit: 10;
         stroke-width: 20px;
-    }
+    }    
 }
 
-main .secondarySection figure
+
+.secondaryFigureSection-figureSet
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 20px 0 60px 0;
+}
+
+.secondaryFigureSection-figure
 {
     box-sizing: border-box;   
     width: calc((100% - 3*20px)/4);
@@ -442,19 +403,16 @@ main .secondarySection figure
     {
         width: 100%;
     }
-
-    figcaption
-    {
-        flex: 1 1 auto;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
-        margin: 30px 0 0 0;
-    }
 }
 
-main .secondarySection figcaption
+.secondaryFigureSection-figureCaption
 {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    margin: 30px 0 0 0;
+
     h1
     {                
         font-size: $font-size-medium;
@@ -498,8 +456,14 @@ main .secondarySection figcaption
     }
 }
 
-main .socialMediaSection
+.socialMediaSection
 {
+    width: $page-width;
+    min-width: $page-minWidth;
+    margin: 30px 0;
+    font-size: $font-size-medium;
+    color: $font-color-lightGray;
+
     span
     {
         margin-right: 10px;
@@ -522,7 +486,7 @@ footer
     margin-top: 10px;
 }
 
-footer .primarySection
+.primaryFooterSection
 {
     width: $page-width;    
     min-width: $page-minWidth;
@@ -530,15 +494,12 @@ footer .primarySection
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-
-    nav
-    {
-        flex: 0 1 auto;
-    }
 }
 
-footer .primarySection-navMenu
+.primaryFooterSection-navMenu
 {
+    flex: 0 1 auto;
+
     h1
     {
         font-size: $font-size-medium;
@@ -565,7 +526,7 @@ footer .primarySection-navMenu
     }
 }
 
-footer .secondarySection
+.secondaryFooterSection
 {
     width: $page-width;
     min-width: $page-minWidth;
@@ -573,23 +534,13 @@ footer .secondarySection
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-
-    .secondarySection-languageButton
-    {
-        cursor: pointer;
-        font-size: $font-size-small;
-        color: $font-color-lightGray;
-    }
-
-    .secondarySection-languageButton:hover
-    {
-        color: $font-color-darkGray;
-        text-decoration: underline;
-    }    
 }
 
-footer .secondarySection .secondarySection-languageButton
+.secondaryFooterSection-languageButton
 {
+    cursor: pointer;
+    font-size: $font-size-small;
+    color: $font-color-lightGray;
     background: none;
     border: none;
 
@@ -601,29 +552,33 @@ footer .secondarySection .secondarySection-languageButton
     }
 }
 
-footer .secondarySection
+.secondaryFooterSection-languageButton:hover
 {
-    ul
-    {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-around;
-    }
+    color: $font-color-darkGray;
+    text-decoration: underline;
+}    
 
-    ul li
+
+.secondaryFooterSection-miscMenu
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+
+    li
     {
         margin: 0 10px;
         font-size: $font-size-small;    
         color: $font-color-lightGray;    
     }
 
-    ul li a
+    li a
     {
         text-decoration: none;
         color: $font-color-lightGray;
     }
 
-    ul li a:hover
+    li a:hover
     {
         color: $font-color-darkGray;
         text-decoration: underline;
