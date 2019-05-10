@@ -13,6 +13,7 @@ header {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+  position: relative;
 }
 
 .headerLogo img {
@@ -69,14 +70,46 @@ header {
 .headerSecondaryNav li a:hover {
   border-bottom: solid black 2px;
 }
-.headerSecondaryNav li button {
+.headerSecondaryNav button {
   cursor: pointer;
   background: none;
   border: none;
-  border-bottom: solid transparent 2px;
+  border: solid transparent 2px;
+  height: 40px;
 }
-.headerSecondaryNav li button:hover {
+.headerSecondaryNav button:hover {
   border-bottom: solid black 2px;
+}
+.headerSecondaryNav button:active {
+  margin: 0;
+  padding: 0 8px;
+}
+
+#header-navmenu {
+  background-color: #f0f0f0;
+  border: solid gainsboro 1px;
+  padding: 10px;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 20;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+#header-navmenu ul {
+  margin: 0 20px;
+}
+#header-navmenu li {
+  margin: 20px 0;
+}
+#header-navmenu h1 {
+  font-weight: bold;
+  color: #646464;
+}
+#header-navmenu a {
+  color: black;
+  text-decoration: none;
 }
 
 main {
