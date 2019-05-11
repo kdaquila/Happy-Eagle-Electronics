@@ -459,23 +459,18 @@ main {
 }
 
 .socialMediaSection {
+  margin: 30px 0;
   max-width: 1400px;
   font-size: 20px;
   color: #505050;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 500px) {
   .socialMediaSection {
     margin: 30px 0;
     width: 100%;
     display: flex;
     flex-flow: column nowrap;
     text-align: center;
-  }
-}
-@media only screen and (min-width: 1001px) {
-  .socialMediaSection {
-    margin: 30px 0;
-    width: 85%;
   }
 }
 .socialMediaSection span {
@@ -514,19 +509,26 @@ footer {
 
 .primaryFooterSection-navMenu {
   flex: 0 1 auto;
-  padding: 10px 20px;
+  padding: 10px 0;
 }
 @media only screen and (max-width: 550px) {
   .primaryFooterSection-navMenu {
     width: 100%;
     align-content: center;
     text-align: center;
+    padding: 10px 20px;
   }
 }
 @media only screen and (min-width: 551px) and (max-width: 700px) {
   .primaryFooterSection-navMenu {
     box-sizing: border-box;
     width: 33.3%;
+    padding: 10px 20px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .primaryFooterSection-navMenu {
+    padding: 10px 20px;
   }
 }
 .primaryFooterSection-navMenu h1 {
