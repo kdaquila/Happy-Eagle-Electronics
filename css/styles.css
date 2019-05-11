@@ -3,7 +3,6 @@
 }
 
 body {
-  margin: 0 auto;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -490,6 +489,7 @@ footer {
 }
 
 .primaryFooterSection {
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
@@ -550,6 +550,7 @@ footer {
 }
 
 .secondaryFooterSection {
+  max-width: 1400px;
   margin: 50px auto 0 auto;
   display: flex;
   justify-content: space-between;

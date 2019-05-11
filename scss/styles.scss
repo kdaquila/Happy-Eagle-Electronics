@@ -7,7 +7,6 @@
 
 body
 {
-    margin: 0 auto;
     font-family: $font-names;
 }
 
@@ -618,6 +617,7 @@ footer
         width: 85%;        
         justify-content: space-between; 
     }     
+    max-width: 1400px;
     margin: 0 auto;
     display: flex;
     flex-flow: row wrap;
@@ -683,6 +683,7 @@ footer
         width: 85%; 
         flex-flow: row wrap;
     }  
+    max-width: 1400px;
     margin: 50px auto 0 auto;
     display: flex;    
     justify-content: space-between;
