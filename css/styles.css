@@ -3,7 +3,6 @@
 }
 
 body {
-  max-width: 1400px;
   margin: 0 auto;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -13,6 +12,7 @@ header {
   display: flex;
   align-items: center;
   position: relative;
+  max-width: 1400px;
 }
 @media only screen and (max-width: 770px) {
   header {
@@ -133,7 +133,7 @@ header {
 
 main {
   margin: 0 auto;
-  overflow-x: hidden;
+  max-width: 1400px;
 }
 @media only screen and (max-width: 1000px) {
   main {
@@ -392,7 +392,7 @@ main {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  margin: 20px 0 60px 0;
+  margin: 20px 0 30px 0;
 }
 
 .secondaryFigureSection-figure {
@@ -459,20 +459,33 @@ main {
 }
 
 .socialMediaSection {
-  width: 85%;
-  min-width: 1024px;
-  margin: 30px 0;
+  max-width: 1400px;
   font-size: 20px;
   color: #505050;
 }
+@media only screen and (max-width: 1000px) {
+  .socialMediaSection {
+    margin: 30px 0;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 1001px) {
+  .socialMediaSection {
+    margin: 30px 0;
+    width: 85%;
+  }
+}
 .socialMediaSection span {
-  margin-right: 10px;
+  margin: 10px 10px;
 }
 .socialMediaSection img {
   height: 40px;
   width: auto;
   vertical-align: middle;
-  margin: 0 5px;
+  margin: 5px 5px;
 }
 
 footer {
@@ -485,16 +498,17 @@ footer {
   margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
 }
 @media only screen and (max-width: 1000px) {
   .primaryFooterSection {
     width: 100%;
+    justify-content: flex-start;
   }
 }
 @media only screen and (min-width: 1001px) {
   .primaryFooterSection {
     width: 85%;
+    justify-content: space-between;
   }
 }
 
