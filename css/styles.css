@@ -3,17 +3,34 @@
 }
 
 body {
+  max-width: 1400px;
+  margin: 0 auto;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header {
-  width: 85%;
-  min-width: 1024px;
   margin: 10px auto;
   display: flex;
-  flex-flow: row wrap;
   align-items: center;
   position: relative;
+}
+@media only screen and (max-width: 770px) {
+  header {
+    flex-flow: column nowrap;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 771px) and (max-width: 1000px) {
+  header {
+    flex-flow: row wrap;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1001px) {
+  header {
+    flex-flow: row wrap;
+    width: 85%;
+  }
 }
 
 .headerLogo img {
@@ -21,8 +38,10 @@ header {
   width: auto;
 }
 
-.headerPrimaryNav {
-  margin-right: auto;
+@media only screen and (min-width: 771px) {
+  .headerPrimaryNav {
+    margin-right: auto;
+  }
 }
 .headerPrimaryNav ul {
   display: flex;
@@ -51,7 +70,7 @@ header {
   margin: 0;
 }
 .headerSecondaryNav li {
-  margin: 0 10px;
+  margin-right: 10px;
 }
 .headerSecondaryNav li img {
   width: auto;
@@ -113,9 +132,17 @@ header {
 }
 
 main {
-  width: 85%;
-  min-width: 1024px;
   margin: 0 auto;
+}
+@media only screen and (max-width: 1000px) {
+  main {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1001px) {
+  main {
+    width: 85%;
+  }
 }
 
 .primaryFigureSection {
@@ -132,6 +159,7 @@ main {
 }
 .primaryFigureSection-figure img {
   width: 100%;
+  display: block;
 }
 
 .primaryFigureSection-figure.prev {
@@ -160,11 +188,26 @@ main {
 }
 
 .primaryFigureSection-figureCaption {
-  position: absolute;
+  padding: 40px;
   text-align: left;
   display: flex;
   flex-flow: column nowrap;
   align-content: flex-end;
+}
+@media only screen and (max-width: 700px) {
+  .primaryFigureSection-figureCaption {
+    position: static;
+    width: 100%;
+    top: 100%;
+  }
+}
+@media only screen and (min-width: 701px) {
+  .primaryFigureSection-figureCaption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+  }
 }
 .primaryFigureSection-figureCaption h1 {
   font-size: 50px;
@@ -199,10 +242,11 @@ main {
 .primaryFigureSection-figureCaption.darkTheme {
   color: white;
   right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 30px;
-  width: 300px;
+}
+@media only screen and (max-width: 700px) {
+  .primaryFigureSection-figureCaption.darkTheme {
+    background-color: #323232;
+  }
 }
 .primaryFigureSection-figureCaption.darkTheme button {
   background-color: white;
@@ -217,10 +261,11 @@ main {
 .primaryFigureSection-figureCaption.brightTheme {
   color: black;
   left: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 30px;
-  width: 350px;
+}
+@media only screen and (max-width: 700px) {
+  .primaryFigureSection-figureCaption.brightTheme {
+    background-color: #c8c8c8;
+  }
 }
 .primaryFigureSection-figureCaption.brightTheme button {
   background-color: black;
@@ -234,13 +279,22 @@ main {
 
 .primaryFigureSection-prevButton {
   position: absolute;
-  top: 50%;
   left: 0;
   width: 70px;
   transform: translateY(-50%);
   cursor: pointer;
   background: none;
   border: none;
+}
+@media only screen and (max-width: 700px) {
+  .primaryFigureSection-prevButton {
+    top: 25%;
+  }
+}
+@media only screen and (min-width: 701px) {
+  .primaryFigureSection-prevButton {
+    top: 50%;
+  }
 }
 .primaryFigureSection-prevButton svg {
   fill: none;
@@ -265,6 +319,16 @@ main {
   cursor: pointer;
   background: none;
   border: none;
+}
+@media only screen and (max-width: 700px) {
+  .primaryFigureSection-nextButton {
+    top: 25%;
+  }
+}
+@media only screen and (min-width: 701px) {
+  .primaryFigureSection-nextButton {
+    top: 50%;
+  }
 }
 .primaryFigureSection-nextButton svg {
   fill: none;
@@ -325,17 +389,31 @@ main {
 
 .secondaryFigureSection-figureSet {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-between;
   margin: 20px 0 60px 0;
 }
 
 .secondaryFigureSection-figure {
   box-sizing: border-box;
-  width: calc((100% - 3*20px)/4);
   margin: 10px 0;
   display: flex;
   flex-flow: column nowrap;
+}
+@media only screen and (max-width: 374px) {
+  .secondaryFigureSection-figure {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 700px) {
+  .secondaryFigureSection-figure {
+    width: calc((100% - 1*20px)/2);
+  }
+}
+@media only screen and (min-width: 701px) {
+  .secondaryFigureSection-figure {
+    width: calc((100% - 3*20px)/4);
+  }
 }
 .secondaryFigureSection-figure img {
   width: 100%;
@@ -346,7 +424,7 @@ main {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  margin: 30px 0 0 0;
+  margin: 10px 10px 20px 10px;
 }
 .secondaryFigureSection-figureCaption h1 {
   font-size: 20px;
@@ -400,20 +478,41 @@ footer {
   width: 100%;
   background-color: #e6e6e6;
   padding: 30px 0;
-  margin-top: 10px;
 }
 
 .primaryFooterSection {
-  width: 85%;
-  min-width: 1024px;
   margin: 0 auto;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+@media only screen and (max-width: 1000px) {
+  .primaryFooterSection {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1001px) {
+  .primaryFooterSection {
+    width: 85%;
+  }
 }
 
 .primaryFooterSection-navMenu {
   flex: 0 1 auto;
+  padding: 10px 20px;
+}
+@media only screen and (max-width: 550px) {
+  .primaryFooterSection-navMenu {
+    width: 100%;
+    align-content: center;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 551px) and (max-width: 700px) {
+  .primaryFooterSection-navMenu {
+    box-sizing: border-box;
+    width: 33.3%;
+  }
 }
 .primaryFooterSection-navMenu h1 {
   font-size: 20px;
@@ -434,12 +533,22 @@ footer {
 }
 
 .secondaryFooterSection {
-  width: 85%;
-  min-width: 1024px;
   margin: 50px auto 0 auto;
   display: flex;
-  flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 1000px) {
+  .secondaryFooterSection {
+    width: 100%;
+    flex-flow: column nowrap;
+  }
+}
+@media only screen and (min-width: 1001px) {
+  .secondaryFooterSection {
+    width: 85%;
+    flex-flow: row wrap;
+  }
 }
 
 .secondaryFooterSection-languageButton {
@@ -448,6 +557,7 @@ footer {
   color: #505050;
   background: none;
   border: none;
+  margin: 10px 0;
 }
 .secondaryFooterSection-languageButton img {
   width: 14px;
@@ -462,11 +572,26 @@ footer {
 
 .secondaryFooterSection-miscMenu {
   display: flex;
-  flex-flow: row nowrap;
   justify-content: space-around;
+  margin: 10px 0;
+}
+@media only screen and (max-width: 350px) {
+  .secondaryFooterSection-miscMenu {
+    flex-flow: column nowrap;
+  }
+}
+@media only screen and (min-width: 351px) and (max-width: 700px) {
+  .secondaryFooterSection-miscMenu {
+    flex-flow: row wrap;
+  }
+}
+@media only screen and (min-width: 701px) {
+  .secondaryFooterSection-miscMenu {
+    flex-flow: row wrap;
+  }
 }
 .secondaryFooterSection-miscMenu li {
-  margin: 0 10px;
+  margin: 10px 10px;
   font-size: 14px;
   color: #505050;
 }
